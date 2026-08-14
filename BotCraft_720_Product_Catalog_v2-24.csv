@@ -1,0 +1,721 @@
+id,name,category,supplier,status,type
+BC-01-01,Pi 4 2GB Board,Raspberry Pi Boards & Compute,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-01-02,Pi 4 4GB Board,Raspberry Pi Boards & Compute,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-01-03,Pi 4 8GB Board,Raspberry Pi Boards & Compute,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-01-04,Pi 5 2GB Board,Raspberry Pi Boards & Compute,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-01-05,Pi 5 4GB Board,Raspberry Pi Boards & Compute,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-01-06,Pi 5 8GB Board,Raspberry Pi Boards & Compute,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-01-07,Pi Zero 2 W Board,Raspberry Pi Boards & Compute,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-01-08,Pi Zero W Board,Raspberry Pi Boards & Compute,eBay,Source & stock to verify,Affiliate / partner listing
+BC-01-09,Compute Module Carrier,Raspberry Pi Boards & Compute,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-01-10,Compute Module IO Board,Raspberry Pi Boards & Compute,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-01-11,Pico Development Board,Raspberry Pi Boards & Compute,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-01-12,Pico W Development Board,Raspberry Pi Boards & Compute,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-01-13,Pico 2 Development Board,Raspberry Pi Boards & Compute,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-01-14,Pico 2 W Development Board,Raspberry Pi Boards & Compute,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-01-15,Pi 400 Keyboard Computer,Raspberry Pi Boards & Compute,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-01-16,Pi 500 Desktop Computer,Raspberry Pi Boards & Compute,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-01-17,Pi 4 Starter Bundle,Raspberry Pi Boards & Compute,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-01-18,Pi 5 Starter Bundle,Raspberry Pi Boards & Compute,eBay,Source & stock to verify,Affiliate / partner listing
+BC-01-19,Pico Starter Pack,Raspberry Pi Boards & Compute,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-01-20,Compute Module Starter Kit,Raspberry Pi Boards & Compute,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-01-21,USB Boot Storage Board,Raspberry Pi Boards & Compute,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-01-22,RTC Expansion Board,Raspberry Pi Boards & Compute,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-01-23,PoE Development Board,Raspberry Pi Boards & Compute,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-01-24,Industrial Compute Module Board,Raspberry Pi Boards & Compute,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-01-25,Maker Compute Board,Raspberry Pi Boards & Compute,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-01-26,Embedded Pi Controller,Raspberry Pi Boards & Compute,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-01-27,Pi Cluster Node Board,Raspberry Pi Boards & Compute,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-01-28,Pi AI Development Board,Raspberry Pi Boards & Compute,eBay,Source & stock to verify,Affiliate / partner listing
+BC-01-29,Pi Robotics Controller,Raspberry Pi Boards & Compute,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-01-30,Pi Education Board,Raspberry Pi Boards & Compute,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-02-01,2WD Robot Chassis,Robot Chassis & Frames,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-02-02,4WD Robot Chassis,Robot Chassis & Frames,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-02-03,Tracked Robot Chassis,Robot Chassis & Frames,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-02-04,Acrylic Robot Chassis,Robot Chassis & Frames,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-02-05,Metal Robot Chassis,Robot Chassis & Frames,eBay,Source & stock to verify,Affiliate / partner listing
+BC-02-06,Mini Robot Chassis,Robot Chassis & Frames,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-02-07,Large Robot Chassis,Robot Chassis & Frames,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-02-08,Low Profile Chassis,Robot Chassis & Frames,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-02-09,All-Terrain Chassis,Robot Chassis & Frames,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-02-10,Tank Chassis,Robot Chassis & Frames,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-02-11,Ball-Balancing Chassis,Robot Chassis & Frames,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-02-12,Omnidirectional Chassis,Robot Chassis & Frames,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-02-13,Mecanum Chassis,Robot Chassis & Frames,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-02-14,Aluminium Robot Frame,Robot Chassis & Frames,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-02-15,Carbon-Fiber Robot Plate,Robot Chassis & Frames,eBay,Source & stock to verify,Affiliate / partner listing
+BC-02-16,Acrylic Mounting Plate,Robot Chassis & Frames,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-02-17,Universal Robot Base,Robot Chassis & Frames,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-02-18,Modular Robot Frame,Robot Chassis & Frames,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-02-19,Expansion Plate,Robot Chassis & Frames,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-02-20,Servo Mount Plate,Robot Chassis & Frames,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-02-21,Battery Mount Plate,Robot Chassis & Frames,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-02-22,Motor Mount Bracket,Robot Chassis & Frames,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-02-23,Sensor Mount Bracket,Robot Chassis & Frames,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-02-24,Camera Mount Bracket,Robot Chassis & Frames,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-02-25,Raspberry Pi Mount,Robot Chassis & Frames,eBay,Source & stock to verify,Affiliate / partner listing
+BC-02-26,Stackable Robot Plate,Robot Chassis & Frames,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-02-27,Robotic Arm Base,Robot Chassis & Frames,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-02-28,Pan-Tilt Base,Robot Chassis & Frames,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-02-29,Wheel Hub Plate,Robot Chassis & Frames,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-02-30,Chassis Hardware Set,Robot Chassis & Frames,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-03-01,TT Gear Motor,Motors & Gearboxes,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-03-02,Micro Metal Gear Motor,Motors & Gearboxes,eBay,Source & stock to verify,Affiliate / partner listing
+BC-03-03,N20 Gear Motor,Motors & Gearboxes,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-03-04,High-Torque Gear Motor,Motors & Gearboxes,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-03-05,Low-Speed Gear Motor,Motors & Gearboxes,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-03-06,DC Motor 3V,Motors & Gearboxes,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-03-07,DC Motor 6V,Motors & Gearboxes,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-03-08,DC Motor 12V,Motors & Gearboxes,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-03-09,Encoder Gear Motor,Motors & Gearboxes,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-03-10,Planetary Gear Motor,Motors & Gearboxes,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-03-11,Worm Gear Motor,Motors & Gearboxes,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-03-12,Coreless DC Motor,Motors & Gearboxes,eBay,Source & stock to verify,Affiliate / partner listing
+BC-03-13,Brushless DC Motor,Motors & Gearboxes,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-03-14,Stepper Motor NEMA 8,Motors & Gearboxes,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-03-15,Stepper Motor NEMA 11,Motors & Gearboxes,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-03-16,Stepper Motor NEMA 14,Motors & Gearboxes,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-03-17,Stepper Motor NEMA 17,Motors & Gearboxes,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-03-18,Stepper Motor Driver Motor,Motors & Gearboxes,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-03-19,Mini Servo Motor,Motors & Gearboxes,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-03-20,Standard Servo Motor,Motors & Gearboxes,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-03-21,Metal Gear Servo,Motors & Gearboxes,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-03-22,Continuous Rotation Servo,Motors & Gearboxes,eBay,Source & stock to verify,Affiliate / partner listing
+BC-03-23,Digital Servo,Motors & Gearboxes,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-03-24,High-Torque Servo,Motors & Gearboxes,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-03-25,Micro Servo,Motors & Gearboxes,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-03-26,Pan-Tilt Servo,Motors & Gearboxes,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-03-27,Linear Actuator,Motors & Gearboxes,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-03-28,Mini Linear Actuator,Motors & Gearboxes,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-03-29,Vibration Motor,Motors & Gearboxes,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-03-30,Motor Coupler,Motors & Gearboxes,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-04-01,65mm Robot Wheel,Wheels Tracks & Motion,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-04-02,80mm Robot Wheel,Wheels Tracks & Motion,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-04-03,100mm Robot Wheel,Wheels Tracks & Motion,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-04-04,130mm Robot Wheel,Wheels Tracks & Motion,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-04-05,Rubber Robot Wheel,Wheels Tracks & Motion,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-04-06,Foam Robot Wheel,Wheels Tracks & Motion,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-04-07,Mecanum Wheel,Wheels Tracks & Motion,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-04-08,Omni Wheel,Wheels Tracks & Motion,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-04-09,Ball Caster,Wheels Tracks & Motion,eBay,Source & stock to verify,Affiliate / partner listing
+BC-04-10,Metal Caster,Wheels Tracks & Motion,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-04-11,Universal Caster,Wheels Tracks & Motion,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-04-12,Tank Track Set,Wheels Tracks & Motion,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-04-13,Mini Track Set,Wheels Tracks & Motion,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-04-14,Large Track Set,Wheels Tracks & Motion,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-04-15,Wheel Hub Set,Wheels Tracks & Motion,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-04-16,Tyre Pair,Wheels Tracks & Motion,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-04-17,Silicone Tyre Set,Wheels Tracks & Motion,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-04-18,Motor Wheel Pair,Wheels Tracks & Motion,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-04-19,Encoder Wheel,Wheels Tracks & Motion,eBay,Source & stock to verify,Affiliate / partner listing
+BC-04-20,Free Wheel Kit,Wheels Tracks & Motion,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-04-21,Suspension Wheel,Wheels Tracks & Motion,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-04-22,All-Terrain Wheel,Wheels Tracks & Motion,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-04-23,Soft-Grip Wheel,Wheels Tracks & Motion,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-04-24,Nylon Wheel,Wheels Tracks & Motion,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-04-25,Aluminium Wheel,Wheels Tracks & Motion,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-04-26,Spare Wheel Set,Wheels Tracks & Motion,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-04-27,Drive Wheel Kit,Wheels Tracks & Motion,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-04-28,Idler Wheel Kit,Wheels Tracks & Motion,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-04-29,Track Tensioner,Wheels Tracks & Motion,eBay,Source & stock to verify,Affiliate / partner listing
+BC-04-30,Motion Hardware Kit,Wheels Tracks & Motion,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-05-01,Dual H-Bridge Driver,Motor Drivers & Controllers,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-05-02,TB6612 Motor Driver,Motor Drivers & Controllers,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-05-03,L298N Motor Driver,Motor Drivers & Controllers,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-05-04,DRV8833 Motor Driver,Motor Drivers & Controllers,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-05-05,DRV8871 Motor Driver,Motor Drivers & Controllers,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-05-06,BTS7960 Driver,Motor Drivers & Controllers,eBay,Source & stock to verify,Affiliate / partner listing
+BC-05-07,High Current Motor Driver,Motor Drivers & Controllers,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-05-08,Stepper Driver Module,Motor Drivers & Controllers,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-05-09,Servo Driver 8-Channel,Motor Drivers & Controllers,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-05-10,Servo Driver 16-Channel,Motor Drivers & Controllers,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-05-11,PWM Motor Controller,Motor Drivers & Controllers,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-05-12,4-Channel Motor Controller,Motor Drivers & Controllers,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-05-13,6-Channel Motor Controller,Motor Drivers & Controllers,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-05-14,8-Channel Motor Controller,Motor Drivers & Controllers,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-05-15,DC Motor Controller,Motor Drivers & Controllers,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-05-16,Brushless ESC,Motor Drivers & Controllers,eBay,Source & stock to verify,Affiliate / partner listing
+BC-05-17,Mini ESC,Motor Drivers & Controllers,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-05-18,CAN Motor Controller,Motor Drivers & Controllers,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-05-19,UART Motor Controller,Motor Drivers & Controllers,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-05-20,I2C Motor Controller,Motor Drivers & Controllers,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-05-21,Raspberry Pi Motor HAT,Motor Drivers & Controllers,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-05-22,Pico Motor Driver,Motor Drivers & Controllers,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-05-23,Encoder Motor Controller,Motor Drivers & Controllers,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-05-24,Robot Motion Controller,Motor Drivers & Controllers,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-05-25,Dual Stepper Controller,Motor Drivers & Controllers,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-05-26,Quad Stepper Controller,Motor Drivers & Controllers,eBay,Source & stock to verify,Affiliate / partner listing
+BC-05-27,Smart Servo Controller,Motor Drivers & Controllers,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-05-28,Linear Actuator Controller,Motor Drivers & Controllers,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-05-29,Power Motor Board,Motor Drivers & Controllers,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-05-30,Motor Driver Terminal Shield,Motor Drivers & Controllers,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-06-01,Ultrasonic Distance Sensor,Sensors,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-06-02,ToF Distance Sensor,Sensors,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-06-03,IR Obstacle Sensor,Sensors,eBay,Source & stock to verify,Affiliate / partner listing
+BC-06-04,Line Tracking Sensor,Sensors,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-06-05,Reflective Sensor,Sensors,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-06-06,Light Sensor,Sensors,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-06-07,Ambient Light Sensor,Sensors,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-06-08,Color Sensor,Sensors,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-06-09,RGB Sensor,Sensors,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-06-10,Temperature Sensor,Sensors,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-06-11,Humidity Sensor,Sensors,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-06-12,Pressure Sensor,Sensors,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-06-13,Barometric Sensor,Sensors,eBay,Source & stock to verify,Affiliate / partner listing
+BC-06-14,Gas Sensor,Sensors,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-06-15,Air Quality Sensor,Sensors,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-06-16,CO2 Sensor,Sensors,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-06-17,Flame Sensor,Sensors,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-06-18,Sound Sensor,Sensors,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-06-19,Microphone Module,Sensors,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-06-20,Vibration Sensor,Sensors,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-06-21,Tilt Sensor,Sensors,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-06-22,Gyroscope Module,Sensors,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-06-23,Accelerometer Module,Sensors,eBay,Source & stock to verify,Affiliate / partner listing
+BC-06-24,IMU 6-Axis Sensor,Sensors,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-06-25,IMU 9-Axis Sensor,Sensors,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-06-26,Magnetic Hall Sensor,Sensors,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-06-27,Magnetometer Module,Sensors,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-06-28,Proximity Sensor,Sensors,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-06-29,Touch Sensor,Sensors,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-06-30,Soil Moisture Sensor,Sensors,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-07-01,Raspberry Pi Camera Module,Camera & Vision,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-07-02,Wide-Angle Pi Camera,Camera & Vision,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-07-03,NoIR Pi Camera,Camera & Vision,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-07-04,Global Shutter Camera,Camera & Vision,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-07-05,High-Resolution Pi Camera,Camera & Vision,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-07-06,USB Robot Camera,Camera & Vision,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-07-07,USB Wide-Angle Camera,Camera & Vision,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-07-08,Autofocus Camera,Camera & Vision,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-07-09,Camera Ribbon Cable,Camera & Vision,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-07-10,Camera Extension Cable,Camera & Vision,eBay,Source & stock to verify,Affiliate / partner listing
+BC-07-11,Camera Mount,Camera & Vision,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-07-12,Camera Pan-Tilt Mount,Camera & Vision,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-07-13,Camera Tripod Mount,Camera & Vision,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-07-14,Camera Lens Kit,Camera & Vision,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-07-15,Wide-Angle Lens,Camera & Vision,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-07-16,Telephoto Lens,Camera & Vision,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-07-17,Macro Lens,Camera & Vision,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-07-18,IR LED Camera Light,Camera & Vision,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-07-19,Camera Ring Light,Camera & Vision,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-07-20,Camera Case,Camera & Vision,eBay,Source & stock to verify,Affiliate / partner listing
+BC-07-21,Camera Privacy Shutter,Camera & Vision,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-07-22,Camera Adapter Board,Camera & Vision,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-07-23,CSI Camera Switch,Camera & Vision,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-07-24,Dual Camera Adapter,Camera & Vision,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-07-25,Multi-Camera Adapter,Camera & Vision,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-07-26,Camera Cooling Mount,Camera & Vision,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-07-27,AI Vision Camera,Camera & Vision,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-07-28,Depth Camera Module,Camera & Vision,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-07-29,Stereo Camera Pair,Camera & Vision,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-07-30,Vision Lighting Kit,Camera & Vision,eBay,Source & stock to verify,Affiliate / partner listing
+BC-08-01,GPIO Expansion Board,GPIO HATs & Expansion,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-08-02,GPIO Breakout Board,GPIO HATs & Expansion,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-08-03,T-Cobbler GPIO Kit,GPIO HATs & Expansion,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-08-04,40-Pin GPIO Header,GPIO HATs & Expansion,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-08-05,GPIO Screw Terminal Board,GPIO HATs & Expansion,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-08-06,GPIO Breadboard Adapter,GPIO HATs & Expansion,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-08-07,Relay HAT,GPIO HATs & Expansion,eBay,Source & stock to verify,Affiliate / partner listing
+BC-08-08,Motor HAT,GPIO HATs & Expansion,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-08-09,Servo HAT,GPIO HATs & Expansion,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-08-10,Sensor HAT,GPIO HATs & Expansion,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-08-11,ADC HAT,GPIO HATs & Expansion,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-08-12,DAC HAT,GPIO HATs & Expansion,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-08-13,RTC HAT,GPIO HATs & Expansion,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-08-14,PoE HAT,GPIO HATs & Expansion,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-08-15,CAN HAT,GPIO HATs & Expansion,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-08-16,RS485 HAT,GPIO HATs & Expansion,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-08-17,LoRa HAT,GPIO HATs & Expansion,eBay,Source & stock to verify,Affiliate / partner listing
+BC-08-18,GPS HAT,GPIO HATs & Expansion,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-08-19,OLED HAT,GPIO HATs & Expansion,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-08-20,LED Matrix HAT,GPIO HATs & Expansion,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-08-21,Button HAT,GPIO HATs & Expansion,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-08-22,Buzzer HAT,GPIO HATs & Expansion,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-08-23,Audio HAT,GPIO HATs & Expansion,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-08-24,Display HAT,GPIO HATs & Expansion,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-08-25,Power Management HAT,GPIO HATs & Expansion,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-08-26,Fan HAT,GPIO HATs & Expansion,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-08-27,UPS HAT,GPIO HATs & Expansion,eBay,Source & stock to verify,Affiliate / partner listing
+BC-08-28,Stepper HAT,GPIO HATs & Expansion,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-08-29,Automation HAT,GPIO HATs & Expansion,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-08-30,Industrial I/O HAT,GPIO HATs & Expansion,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-09-01,5V USB-C Power Supply,Power Batteries & Charging,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-09-02,27W Pi 5 Power Supply,Power Batteries & Charging,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-09-03,Official Pi Power Supply,Power Batteries & Charging,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-09-04,USB-C PD Supply,Power Batteries & Charging,eBay,Source & stock to verify,Affiliate / partner listing
+BC-09-05,12V DC Adapter,Power Batteries & Charging,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-09-06,9V DC Adapter,Power Batteries & Charging,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-09-07,6V DC Adapter,Power Batteries & Charging,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-09-08,Adjustable DC Supply,Power Batteries & Charging,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-09-09,Li-ion Battery Pack,Power Batteries & Charging,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-09-10,LiPo Battery Pack,Power Batteries & Charging,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-09-11,NiMH Battery Pack,Power Batteries & Charging,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-09-12,18650 Battery Holder,Power Batteries & Charging,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-09-13,AA Battery Holder,Power Batteries & Charging,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-09-14,AAA Battery Holder,Power Batteries & Charging,eBay,Source & stock to verify,Affiliate / partner listing
+BC-09-15,Battery Management Board,Power Batteries & Charging,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-09-16,LiPo Charger Board,Power Batteries & Charging,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-09-17,USB Battery Charger,Power Batteries & Charging,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-09-18,Power Bank Module,Power Batteries & Charging,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-09-19,UPS Battery Board,Power Batteries & Charging,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-09-20,Power Distribution Board,Power Batteries & Charging,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-09-21,DC-DC Buck Converter,Power Batteries & Charging,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-09-22,DC-DC Boost Converter,Power Batteries & Charging,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-09-23,Buck-Boost Converter,Power Batteries & Charging,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-09-24,USB Power Switch,Power Batteries & Charging,eBay,Source & stock to verify,Affiliate / partner listing
+BC-09-25,Inline Power Switch,Power Batteries & Charging,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-09-26,Power Monitor Board,Power Batteries & Charging,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-09-27,Current Sensor Module,Power Batteries & Charging,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-09-28,Voltage Sensor Module,Power Batteries & Charging,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-09-29,Fuse Holder Kit,Power Batteries & Charging,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-09-30,Robot Power Wiring Kit,Power Batteries & Charging,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-10-01,USB-C Cable,Cables Connectors & Wiring,eBay,Source & stock to verify,Affiliate / partner listing
+BC-10-02,Micro USB Cable,Cables Connectors & Wiring,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-10-03,USB-A to USB-C Cable,Cables Connectors & Wiring,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-10-04,USB-A to Micro USB Cable,Cables Connectors & Wiring,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-10-05,HDMI Cable,Cables Connectors & Wiring,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-10-06,Micro HDMI Cable,Cables Connectors & Wiring,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-10-07,Ethernet Cable,Cables Connectors & Wiring,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-10-08,GPIO Ribbon Cable,Cables Connectors & Wiring,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-10-09,Jumper Wire Male-Male,Cables Connectors & Wiring,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-10-10,Jumper Wire Male-Female,Cables Connectors & Wiring,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-10-11,Jumper Wire Female-Female,Cables Connectors & Wiring,eBay,Source & stock to verify,Affiliate / partner listing
+BC-10-12,Servo Extension Cable,Cables Connectors & Wiring,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-10-13,Motor Cable,Cables Connectors & Wiring,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-10-14,Battery Cable,Cables Connectors & Wiring,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-10-15,Dupont Connector Set,Cables Connectors & Wiring,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-10-16,JST Connector Set,Cables Connectors & Wiring,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-10-17,XT30 Connector Set,Cables Connectors & Wiring,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-10-18,XT60 Connector Set,Cables Connectors & Wiring,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-10-19,Screw Terminal Set,Cables Connectors & Wiring,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-10-20,Terminal Block Set,Cables Connectors & Wiring,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-10-21,Breadboard Wire Kit,Cables Connectors & Wiring,eBay,Source & stock to verify,Affiliate / partner listing
+BC-10-22,Silicone Wire Kit,Cables Connectors & Wiring,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-10-23,Hook-Up Wire Kit,Cables Connectors & Wiring,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-10-24,Crimp Housing Set,Cables Connectors & Wiring,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-10-25,Pin Header Set,Cables Connectors & Wiring,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-10-26,Female Header Set,Cables Connectors & Wiring,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-10-27,Right-Angle Header Set,Cables Connectors & Wiring,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-10-28,GPIO Cable Management Kit,Cables Connectors & Wiring,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-10-29,Cable Tie Set,Cables Connectors & Wiring,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-10-30,Robot Wiring Kit,Cables Connectors & Wiring,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-11-01,2DOF Robot Arm,Robotic Arms & Grippers,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-11-02,4DOF Robot Arm,Robotic Arms & Grippers,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-11-03,5DOF Robot Arm,Robotic Arms & Grippers,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-11-04,6DOF Robot Arm,Robotic Arms & Grippers,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-11-05,Desktop Robot Arm,Robotic Arms & Grippers,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-11-06,Educational Robot Arm,Robotic Arms & Grippers,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-11-07,Servo Robot Arm,Robotic Arms & Grippers,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-11-08,Smart Robot Arm,Robotic Arms & Grippers,eBay,Source & stock to verify,Affiliate / partner listing
+BC-11-09,Aluminium Robot Arm,Robotic Arms & Grippers,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-11-10,Acrylic Robot Arm,Robotic Arms & Grippers,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-11-11,Mini Robot Gripper,Robotic Arms & Grippers,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-11-12,Parallel Gripper,Robotic Arms & Grippers,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-11-13,Servo Gripper,Robotic Arms & Grippers,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-11-14,Electric Gripper,Robotic Arms & Grippers,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-11-15,Vacuum Gripper,Robotic Arms & Grippers,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-11-16,Soft Gripper,Robotic Arms & Grippers,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-11-17,Two-Finger Gripper,Robotic Arms & Grippers,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-11-18,Four-Finger Gripper,Robotic Arms & Grippers,eBay,Source & stock to verify,Affiliate / partner listing
+BC-11-19,Gripper Mount,Robotic Arms & Grippers,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-11-20,Arm Base Plate,Robotic Arms & Grippers,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-11-21,Servo Joint Module,Robotic Arms & Grippers,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-11-22,Robot Arm Link,Robotic Arms & Grippers,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-11-23,Robot Arm Bracket,Robotic Arms & Grippers,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-11-24,Robot Arm Cable Set,Robotic Arms & Grippers,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-11-25,Robot Arm Controller,Robotic Arms & Grippers,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-11-26,Robot Arm End-Effector Kit,Robotic Arms & Grippers,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-11-27,Robot Arm Calibration Kit,Robotic Arms & Grippers,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-11-28,Robot Arm Expansion Kit,Robotic Arms & Grippers,eBay,Source & stock to verify,Affiliate / partner listing
+BC-11-29,Robot Arm Workspace Mat,Robotic Arms & Grippers,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-11-30,Robot Arm Spare Hardware,Robotic Arms & Grippers,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-12-01,2.4-inch SPI Display,Displays & Interfaces,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-12-02,2.8-inch SPI Display,Displays & Interfaces,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-12-03,3.5-inch SPI Display,Displays & Interfaces,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-12-04,5-inch HDMI Display,Displays & Interfaces,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-12-05,7-inch HDMI Display,Displays & Interfaces,eBay,Source & stock to verify,Affiliate / partner listing
+BC-12-06,7-inch Touch Display,Displays & Interfaces,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-12-07,10-inch HDMI Display,Displays & Interfaces,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-12-08,13-inch Portable Display,Displays & Interfaces,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-12-09,OLED 0.96-inch Module,Displays & Interfaces,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-12-10,OLED 1.3-inch Module,Displays & Interfaces,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-12-11,LCD Character Display,Displays & Interfaces,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-12-12,LCD I2C Display,Displays & Interfaces,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-12-13,E-Ink Display,Displays & Interfaces,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-12-14,E-Ink HAT,Displays & Interfaces,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-12-15,LED Matrix 8x8,Displays & Interfaces,eBay,Source & stock to verify,Affiliate / partner listing
+BC-12-16,LED Matrix 16x16,Displays & Interfaces,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-12-17,RGB LED Matrix,Displays & Interfaces,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-12-18,Touchscreen Controller,Displays & Interfaces,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-12-19,Display Adapter Board,Displays & Interfaces,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-12-20,HDMI to CSI Adapter,Displays & Interfaces,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-12-21,DSI Display Cable,Displays & Interfaces,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-12-22,HDMI Display Cable,Displays & Interfaces,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-12-23,Display Mount,Displays & Interfaces,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-12-24,Display Stand,Displays & Interfaces,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-12-25,Portable Touch Display Case,Displays & Interfaces,eBay,Source & stock to verify,Affiliate / partner listing
+BC-12-26,Display Cooling Kit,Displays & Interfaces,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-12-27,Button Interface Board,Displays & Interfaces,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-12-28,Rotary Encoder Interface,Displays & Interfaces,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-12-29,Joystick Interface Board,Displays & Interfaces,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-12-30,Human Interface Kit,Displays & Interfaces,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-13-01,Wi-Fi USB Adapter,Wireless & Communication,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-13-02,Bluetooth USB Adapter,Wireless & Communication,eBay,Source & stock to verify,Affiliate / partner listing
+BC-13-03,BLE Module,Wireless & Communication,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-13-04,LoRa Module,Wireless & Communication,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-13-05,LoRa HAT,Wireless & Communication,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-13-06,Zigbee Module,Wireless & Communication,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-13-07,Z-Wave Module,Wireless & Communication,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-13-08,GPS Module,Wireless & Communication,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-13-09,GNSS Module,Wireless & Communication,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-13-10,GSM Module,Wireless & Communication,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-13-11,LTE Module,Wireless & Communication,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-13-12,4G USB Modem,Wireless & Communication,eBay,Source & stock to verify,Affiliate / partner listing
+BC-13-13,CAN Bus Module,Wireless & Communication,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-13-14,RS485 Module,Wireless & Communication,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-13-15,RS232 Module,Wireless & Communication,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-13-16,UART Bridge,Wireless & Communication,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-13-17,USB to UART Adapter,Wireless & Communication,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-13-18,USB to CAN Adapter,Wireless & Communication,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-13-19,Ethernet Expansion Board,Wireless & Communication,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-13-20,PoE Adapter,Wireless & Communication,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-13-21,RFID Reader,Wireless & Communication,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-13-22,NFC Reader,Wireless & Communication,eBay,Source & stock to verify,Affiliate / partner listing
+BC-13-23,433MHz RF Module,Wireless & Communication,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-13-24,868MHz RF Module,Wireless & Communication,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-13-25,915MHz RF Module,Wireless & Communication,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-13-26,Infrared Transceiver,Wireless & Communication,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-13-27,IR Remote Receiver,Wireless & Communication,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-13-28,Bluetooth Robot Controller,Wireless & Communication,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-13-29,Wireless Joystick,Wireless & Communication,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-13-30,Wireless Robotics Kit,Wireless & Communication,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-14-01,AI Accelerator Module,AI Edge & Vision Computing,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-14-02,USB AI Accelerator,AI Edge & Vision Computing,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-14-03,PCIe AI Accelerator,AI Edge & Vision Computing,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-14-04,Edge TPU Module,AI Edge & Vision Computing,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-14-05,Neural Compute Module,AI Edge & Vision Computing,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-14-06,Vision AI HAT,AI Edge & Vision Computing,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-14-07,AI Camera Module,AI Edge & Vision Computing,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-14-08,Object Detection Camera,AI Edge & Vision Computing,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-14-09,Face Detection Camera,AI Edge & Vision Computing,eBay,Source & stock to verify,Affiliate / partner listing
+BC-14-10,Pose Detection Camera,AI Edge & Vision Computing,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-14-11,OCR Vision Module,AI Edge & Vision Computing,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-14-12,Edge Vision Kit,AI Edge & Vision Computing,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-14-13,AI Robotics Starter Kit,AI Edge & Vision Computing,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-14-14,AI Inference Board,AI Edge & Vision Computing,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-14-15,NPU Development Board,AI Edge & Vision Computing,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-14-16,GPU Cooling Kit,AI Edge & Vision Computing,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-14-17,AI Compute Fan Kit,AI Edge & Vision Computing,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-14-18,AI Compute Heatsink,AI Edge & Vision Computing,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-14-19,AI Camera Mount,AI Edge & Vision Computing,eBay,Source & stock to verify,Affiliate / partner listing
+BC-14-20,AI Vision Lighting,AI Edge & Vision Computing,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-14-21,Stereo Vision Kit,AI Edge & Vision Computing,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-14-22,Depth Vision Kit,AI Edge & Vision Computing,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-14-23,Autonomous Navigation Kit,AI Edge & Vision Computing,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-14-24,SLAM Sensor Kit,AI Edge & Vision Computing,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-14-25,AI Robot Controller,AI Edge & Vision Computing,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-14-26,AI Development Carrier,AI Edge & Vision Computing,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-14-27,AI Expansion HAT,AI Edge & Vision Computing,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-14-28,AI Sensor Bundle,AI Edge & Vision Computing,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-14-29,Edge AI Starter Bundle,AI Edge & Vision Computing,eBay,Source & stock to verify,Affiliate / partner listing
+BC-14-30,Robot Vision Development Kit,AI Edge & Vision Computing,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-15-01,Pi 4 Case,Cooling Cases & Mounts,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-15-02,Pi 5 Case,Cooling Cases & Mounts,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-15-03,Pi Zero Case,Cooling Cases & Mounts,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-15-04,Pico Case,Cooling Cases & Mounts,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-15-05,Aluminium Pi Case,Cooling Cases & Mounts,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-15-06,ABS Pi Case,Cooling Cases & Mounts,eBay,Source & stock to verify,Affiliate / partner listing
+BC-15-07,Transparent Pi Case,Cooling Cases & Mounts,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-15-08,Rugged Pi Case,Cooling Cases & Mounts,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-15-09,Fan Case,Cooling Cases & Mounts,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-15-10,Active Cooler,Cooling Cases & Mounts,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-15-11,Heatsink Set,Cooling Cases & Mounts,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-15-12,Thermal Pad Set,Cooling Cases & Mounts,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-15-13,Copper Heatsink,Cooling Cases & Mounts,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-15-14,Aluminium Heatsink,Cooling Cases & Mounts,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-15-15,PWM Cooling Fan,Cooling Cases & Mounts,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-15-16,5V Cooling Fan,Cooling Cases & Mounts,eBay,Source & stock to verify,Affiliate / partner listing
+BC-15-17,12V Cooling Fan,Cooling Cases & Mounts,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-15-18,Fan HAT,Cooling Cases & Mounts,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-15-19,Case Fan Kit,Cooling Cases & Mounts,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-15-20,Rack Mount Kit,Cooling Cases & Mounts,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-15-21,DIN Rail Mount,Cooling Cases & Mounts,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-15-22,Wall Mount,Cooling Cases & Mounts,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-15-23,Camera Case,Cooling Cases & Mounts,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-15-24,Sensor Enclosure,Cooling Cases & Mounts,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-15-25,Weatherproof Enclosure,Cooling Cases & Mounts,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-15-26,Project Box,Cooling Cases & Mounts,eBay,Source & stock to verify,Affiliate / partner listing
+BC-15-27,IP65 Enclosure,Cooling Cases & Mounts,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-15-28,Cable Gland Kit,Cooling Cases & Mounts,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-15-29,Ventilation Kit,Cooling Cases & Mounts,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-15-30,Robotics Cooling Bundle,Cooling Cases & Mounts,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-16-01,Mini Breadboard,Prototyping & Breadboards,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-16-02,400-Point Breadboard,Prototyping & Breadboards,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-16-03,830-Point Breadboard,Prototyping & Breadboards,eBay,Source & stock to verify,Affiliate / partner listing
+BC-16-04,Solderless Breadboard Kit,Prototyping & Breadboards,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-16-05,Breadboard Power Supply,Prototyping & Breadboards,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-16-06,Breadboard Jumper Kit,Prototyping & Breadboards,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-16-07,Prototype PCB,Prototyping & Breadboards,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-16-08,Perfboard,Prototyping & Breadboards,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-16-09,Stripboard,Prototyping & Breadboards,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-16-10,Universal PCB,Prototyping & Breadboards,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-16-11,PCB Screw Terminal Board,Prototyping & Breadboards,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-16-12,Proto HAT,Prototyping & Breadboards,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-16-13,Pi Prototype Board,Prototyping & Breadboards,eBay,Source & stock to verify,Affiliate / partner listing
+BC-16-14,Pico Prototype Board,Prototyping & Breadboards,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-16-15,GPIO Prototype Board,Prototyping & Breadboards,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-16-16,Soldering Header Kit,Prototyping & Breadboards,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-16-17,Pin Header Strip,Prototyping & Breadboards,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-16-18,Socket Header Strip,Prototyping & Breadboards,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-16-19,Test Point Kit,Prototyping & Breadboards,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-16-20,Wire Loop Kit,Prototyping & Breadboards,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-16-21,Component Organizer,Prototyping & Breadboards,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-16-22,Breadboard Stand,Prototyping & Breadboards,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-16-23,Breadboard Mount Plate,Prototyping & Breadboards,eBay,Source & stock to verify,Affiliate / partner listing
+BC-16-24,PCB Holder,Prototyping & Breadboards,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-16-25,PCB Clamp,Prototyping & Breadboards,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-16-26,Prototype Enclosure,Prototyping & Breadboards,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-16-27,Circuit Experiment Kit,Prototyping & Breadboards,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-16-28,Maker Prototyping Kit,Prototyping & Breadboards,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-16-29,Electronics Starter Kit,Prototyping & Breadboards,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-16-30,Robotics Prototyping Kit,Prototyping & Breadboards,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-17-01,5mm LED Red,LED Lighting & Indicators,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-17-02,5mm LED Green,LED Lighting & Indicators,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-17-03,5mm LED Blue,LED Lighting & Indicators,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-17-04,5mm LED White,LED Lighting & Indicators,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-17-05,5mm LED Yellow,LED Lighting & Indicators,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-17-06,RGB LED,LED Lighting & Indicators,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-17-07,Addressable RGB LED,LED Lighting & Indicators,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-17-08,LED Strip 5V,LED Lighting & Indicators,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-17-09,LED Strip 12V,LED Lighting & Indicators,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-17-10,LED Ring,LED Lighting & Indicators,eBay,Source & stock to verify,Affiliate / partner listing
+BC-17-11,RGB LED Ring,LED Lighting & Indicators,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-17-12,LED Matrix,LED Lighting & Indicators,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-17-13,LED Bar Graph,LED Lighting & Indicators,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-17-14,Seven Segment Display,LED Lighting & Indicators,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-17-15,Buzzer Module,LED Lighting & Indicators,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-17-16,Active Buzzer,LED Lighting & Indicators,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-17-17,Passive Buzzer,LED Lighting & Indicators,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-17-18,Indicator Lamp,LED Lighting & Indicators,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-17-19,Panel LED,LED Lighting & Indicators,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-17-20,Traffic Light LED Module,LED Lighting & Indicators,eBay,Source & stock to verify,Affiliate / partner listing
+BC-17-21,IR LED,LED Lighting & Indicators,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-17-22,UV LED,LED Lighting & Indicators,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-17-23,White LED Array,LED Lighting & Indicators,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-17-24,High-Power LED Module,LED Lighting & Indicators,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-17-25,LED Driver Board,LED Lighting & Indicators,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-17-26,PWM LED Controller,LED Lighting & Indicators,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-17-27,RGB Controller,LED Lighting & Indicators,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-17-28,LED Diffuser Kit,LED Lighting & Indicators,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-17-29,Robot Headlight Kit,LED Lighting & Indicators,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-17-30,Robotics Lighting Bundle,LED Lighting & Indicators,eBay,Source & stock to verify,Affiliate / partner listing
+BC-18-01,Precision Screwdriver Set,Tools & Workshop,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-18-02,Hex Key Set,Tools & Workshop,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-18-03,Mini Pliers Set,Tools & Workshop,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-18-04,Wire Cutter,Tools & Workshop,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-18-05,Wire Stripper,Tools & Workshop,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-18-06,Crimping Tool,Tools & Workshop,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-18-07,Dupont Crimp Tool,Tools & Workshop,eBay,Source & stock to verify,Affiliate / partner listing
+BC-18-08,Soldering Iron,Tools & Workshop,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-18-09,USB Soldering Iron,Tools & Workshop,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-18-10,Soldering Station,Tools & Workshop,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-18-11,Desoldering Pump,Tools & Workshop,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-18-12,Solder Wick,Tools & Workshop,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-18-13,Solder Wire,Tools & Workshop,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-18-14,Flux Pen,Tools & Workshop,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-18-15,Third Hand Tool,Tools & Workshop,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-18-16,PCB Holder Tool,Tools & Workshop,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-18-17,Digital Multimeter,Tools & Workshop,eBay,Source & stock to verify,Affiliate / partner listing
+BC-18-18,USB Logic Analyzer,Tools & Workshop,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-18-19,Oscilloscope Kit,Tools & Workshop,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-18-20,Bench Power Meter,Tools & Workshop,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-18-21,Caliper,Tools & Workshop,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-18-22,Precision Tweezers,Tools & Workshop,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-18-23,Heat Gun,Tools & Workshop,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-18-24,Heat Shrink Kit,Tools & Workshop,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-18-25,Cable Cutter,Tools & Workshop,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-18-26,Label Maker,Tools & Workshop,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-18-27,Component Storage Box,Tools & Workshop,eBay,Source & stock to verify,Affiliate / partner listing
+BC-18-28,Anti-Static Mat,Tools & Workshop,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-18-29,ESD Wrist Strap,Tools & Workshop,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-18-30,Maker Tool Kit,Tools & Workshop,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-19-01,2WD Learning Robot Kit,Education & Robotics Kits,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-19-02,4WD Learning Robot Kit,Education & Robotics Kits,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-19-03,Line Follower Kit,Education & Robotics Kits,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-19-04,Obstacle Avoiding Robot Kit,Education & Robotics Kits,eBay,Source & stock to verify,Affiliate / partner listing
+BC-19-05,Bluetooth Robot Kit,Education & Robotics Kits,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-19-06,Wi-Fi Robot Kit,Education & Robotics Kits,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-19-07,Camera Robot Kit,Education & Robotics Kits,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-19-08,Smart Car Kit,Education & Robotics Kits,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-19-09,Raspberry Pi Robot Kit,Education & Robotics Kits,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-19-10,Pico Robot Kit,Education & Robotics Kits,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-19-11,Arduino-Compatible Robot Kit,Education & Robotics Kits,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-19-12,Sensor Learning Kit,Education & Robotics Kits,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-19-13,Motor Learning Kit,Education & Robotics Kits,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-19-14,Servo Learning Kit,Education & Robotics Kits,eBay,Source & stock to verify,Affiliate / partner listing
+BC-19-15,GPIO Learning Kit,Education & Robotics Kits,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-19-16,IoT Learning Kit,Education & Robotics Kits,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-19-17,AI Robotics Kit,Education & Robotics Kits,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-19-18,Autonomous Robot Kit,Education & Robotics Kits,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-19-19,Maze Solver Robot Kit,Education & Robotics Kits,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-19-20,Mini Sumo Robot Kit,Education & Robotics Kits,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-19-21,Robotics Arm Learning Kit,Education & Robotics Kits,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-19-22,Humanoid Robot Kit,Education & Robotics Kits,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-19-23,Hexapod Robot Kit,Education & Robotics Kits,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-19-24,Tank Robot Kit,Education & Robotics Kits,eBay,Source & stock to verify,Affiliate / partner listing
+BC-19-25,Mecanum Robot Kit,Education & Robotics Kits,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-19-26,STEM Robotics Kit,Education & Robotics Kits,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-19-27,Classroom Robotics Pack,Education & Robotics Kits,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-19-28,Beginner Robotics Pack,Education & Robotics Kits,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-19-29,Intermediate Robotics Pack,Education & Robotics Kits,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-19-30,Advanced Robotics Pack,Education & Robotics Kits,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-20-01,ESP32 Development Board,Microcontrollers & Development,eBay,Source & stock to verify,Affiliate / partner listing
+BC-20-02,ESP32-S3 Board,Microcontrollers & Development,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-20-03,ESP32-C3 Board,Microcontrollers & Development,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-20-04,ESP8266 Board,Microcontrollers & Development,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-20-05,RP2040 Board,Microcontrollers & Development,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-20-06,RP2350 Board,Microcontrollers & Development,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-20-07,Arduino-Compatible Board,Microcontrollers & Development,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-20-08,Microcontroller Sensor Board,Microcontrollers & Development,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-20-09,Microcontroller Motor Board,Microcontrollers & Development,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-20-10,Microcontroller Relay Board,Microcontrollers & Development,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-20-11,Microcontroller CAN Board,Microcontrollers & Development,eBay,Source & stock to verify,Affiliate / partner listing
+BC-20-12,Microcontroller LoRa Board,Microcontrollers & Development,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-20-13,Microcontroller Wi-Fi Board,Microcontrollers & Development,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-20-14,Microcontroller BLE Board,Microcontrollers & Development,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-20-15,USB Development Board,Microcontrollers & Development,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-20-16,Tiny Development Board,Microcontrollers & Development,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-20-17,Industrial Microcontroller,Microcontrollers & Development,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-20-18,Robotics Microcontroller,Microcontrollers & Development,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-20-19,IoT Development Board,Microcontrollers & Development,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-20-20,Automation Controller,Microcontrollers & Development,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-20-21,PLC-Compatible Controller,Microcontrollers & Development,eBay,Source & stock to verify,Affiliate / partner listing
+BC-20-22,Embedded Controller,Microcontrollers & Development,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-20-23,USB GPIO Controller,Microcontrollers & Development,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-20-24,Multi-I/O Controller,Microcontrollers & Development,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-20-25,Real-Time Controller,Microcontrollers & Development,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-20-26,Low-Power Controller,Microcontrollers & Development,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-20-27,Battery Controller,Microcontrollers & Development,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-20-28,Wireless Controller Board,Microcontrollers & Development,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-20-29,Maker Development Kit,Microcontrollers & Development,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-20-30,Embedded Starter Kit,Microcontrollers & Development,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-21-01,1-Channel Relay Module,Automation & Relays,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-21-02,2-Channel Relay Module,Automation & Relays,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-21-03,4-Channel Relay Module,Automation & Relays,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-21-04,8-Channel Relay Module,Automation & Relays,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-21-05,Solid State Relay,Automation & Relays,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-21-06,High Current Relay,Automation & Relays,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-21-07,Relay HAT,Automation & Relays,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-21-08,Smart Relay Board,Automation & Relays,eBay,Source & stock to verify,Affiliate / partner listing
+BC-21-09,MOSFET Switch Module,Automation & Relays,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-21-10,Power Switch Module,Automation & Relays,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-21-11,USB Relay Controller,Automation & Relays,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-21-12,GPIO Relay Controller,Automation & Relays,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-21-13,Wi-Fi Relay Controller,Automation & Relays,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-21-14,BLE Relay Controller,Automation & Relays,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-21-15,DIN Rail Relay Module,Automation & Relays,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-21-16,Industrial Relay Board,Automation & Relays,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-21-17,Optocoupler Relay Board,Automation & Relays,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-21-18,AC Load Controller,Automation & Relays,eBay,Source & stock to verify,Affiliate / partner listing
+BC-21-19,DC Load Controller,Automation & Relays,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-21-20,Motorized Switch Controller,Automation & Relays,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-21-21,Push Button Module,Automation & Relays,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-21-22,Limit Switch,Automation & Relays,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-21-23,Micro Limit Switch,Automation & Relays,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-21-24,Proximity Switch,Automation & Relays,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-21-25,Magnetic Reed Switch,Automation & Relays,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-21-26,Emergency Stop Switch,Automation & Relays,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-21-27,Panel Switch Kit,Automation & Relays,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-21-28,Automation Wiring Kit,Automation & Relays,eBay,Source & stock to verify,Affiliate / partner listing
+BC-21-29,Relay Protection Kit,Automation & Relays,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-21-30,Home Automation Starter Kit,Automation & Relays,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-22-01,M2 Screw Kit,Fasteners Mechanical Hardware,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-22-02,M2.5 Screw Kit,Fasteners Mechanical Hardware,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-22-03,M3 Screw Kit,Fasteners Mechanical Hardware,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-22-04,M4 Screw Kit,Fasteners Mechanical Hardware,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-22-05,Nylon Spacer Kit,Fasteners Mechanical Hardware,eBay,Source & stock to verify,Affiliate / partner listing
+BC-22-06,Aluminium Spacer Kit,Fasteners Mechanical Hardware,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-22-07,Brass Spacer Kit,Fasteners Mechanical Hardware,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-22-08,Threaded Standoff Kit,Fasteners Mechanical Hardware,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-22-09,Nut & Bolt Kit,Fasteners Mechanical Hardware,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-22-10,Washer Kit,Fasteners Mechanical Hardware,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-22-11,Spring Kit,Fasteners Mechanical Hardware,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-22-12,Bearing Set,Fasteners Mechanical Hardware,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-22-13,Ball Bearing,Fasteners Mechanical Hardware,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-22-14,Flanged Bearing,Fasteners Mechanical Hardware,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-22-15,Wheel Bearing,Fasteners Mechanical Hardware,eBay,Source & stock to verify,Affiliate / partner listing
+BC-22-16,Shaft Coupler,Fasteners Mechanical Hardware,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-22-17,Flexible Coupler,Fasteners Mechanical Hardware,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-22-18,Timing Pulley Set,Fasteners Mechanical Hardware,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-22-19,Timing Belt Set,Fasteners Mechanical Hardware,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-22-20,Gear Set,Fasteners Mechanical Hardware,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-22-21,Plastic Gear Set,Fasteners Mechanical Hardware,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-22-22,Metal Gear Set,Fasteners Mechanical Hardware,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-22-23,Rack & Pinion Set,Fasteners Mechanical Hardware,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-22-24,Lead Screw Set,Fasteners Mechanical Hardware,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-22-25,Threaded Rod Set,Fasteners Mechanical Hardware,eBay,Source & stock to verify,Affiliate / partner listing
+BC-22-26,Servo Horn Set,Fasteners Mechanical Hardware,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-22-27,Motor Mount Hardware,Fasteners Mechanical Hardware,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-22-28,Robot Chassis Hardware,Fasteners Mechanical Hardware,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-22-29,Mechanical Expansion Kit,Fasteners Mechanical Hardware,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-22-30,Robot Fastener Organizer,Fasteners Mechanical Hardware,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-23-01,USB Microphone Module,Audio & Speech Modules,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-23-02,I2S Microphone Module,Audio & Speech Modules,eBay,Source & stock to verify,Affiliate / partner listing
+BC-23-03,MEMS Microphone Board,Audio & Speech Modules,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-23-04,Speaker Module,Audio & Speech Modules,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-23-05,Mini Speaker,Audio & Speech Modules,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-23-06,3W Speaker,Audio & Speech Modules,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-23-07,5W Speaker,Audio & Speech Modules,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-23-08,Amplifier Module,Audio & Speech Modules,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-23-09,I2S Audio HAT,Audio & Speech Modules,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-23-10,USB Audio Adapter,Audio & Speech Modules,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-23-11,Audio Codec Board,Audio & Speech Modules,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-23-12,DAC Audio Module,Audio & Speech Modules,eBay,Source & stock to verify,Affiliate / partner listing
+BC-23-13,Buzzer Driver Board,Audio & Speech Modules,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-23-14,Voice Recognition Module,Audio & Speech Modules,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-23-15,Wake Word Module,Audio & Speech Modules,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-23-16,Sound Level Meter,Audio & Speech Modules,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-23-17,Audio Sensor Board,Audio & Speech Modules,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-23-18,Stereo Microphone Board,Audio & Speech Modules,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-23-19,Speaker Enclosure,Audio & Speech Modules,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-23-20,Mini Audio Amplifier,Audio & Speech Modules,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-23-21,Headphone Amplifier,Audio & Speech Modules,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-23-22,Audio Cable Kit,Audio & Speech Modules,eBay,Source & stock to verify,Affiliate / partner listing
+BC-23-23,3.5mm Audio Adapter,Audio & Speech Modules,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-23-24,Audio Connector Set,Audio & Speech Modules,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-23-25,Robot Voice Module,Audio & Speech Modules,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-23-26,Speech Output Board,Audio & Speech Modules,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-23-27,Audio Expansion Board,Audio & Speech Modules,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-23-28,Smart Speaker Kit,Audio & Speech Modules,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-23-29,Voice Robotics Kit,Audio & Speech Modules,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-23-30,Audio Development Kit,Audio & Speech Modules,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-24-01,microSD 32GB Card,Storage & Data Accessories,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-24-02,microSD 64GB Card,Storage & Data Accessories,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-24-03,microSD 128GB Card,Storage & Data Accessories,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-24-04,microSD 256GB Card,Storage & Data Accessories,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-24-05,microSD Card Reader,Storage & Data Accessories,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-24-06,USB Flash Drive,Storage & Data Accessories,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-24-07,USB 3.0 Flash Drive,Storage & Data Accessories,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-24-08,USB SSD,Storage & Data Accessories,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-24-09,NVMe SSD,Storage & Data Accessories,eBay,Source & stock to verify,Affiliate / partner listing
+BC-24-10,NVMe HAT,Storage & Data Accessories,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-24-11,NVMe Adapter,Storage & Data Accessories,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-24-12,SSD Enclosure,Storage & Data Accessories,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-24-13,USB Storage Adapter,Storage & Data Accessories,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-24-14,microSD Extension Cable,Storage & Data Accessories,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-24-15,Storage Card Case,Storage & Data Accessories,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-24-16,microSD Backup Kit,Storage & Data Accessories,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-24-17,USB Boot Drive,Storage & Data Accessories,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-24-18,Pi Storage Starter Kit,Storage & Data Accessories,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-24-19,Pico Data Logger,Storage & Data Accessories,eBay,Source & stock to verify,Affiliate / partner listing
+BC-24-20,Data Logger HAT,Storage & Data Accessories,Amazon,Source & stock to verify,Affiliate / partner listing
+BC-24-21,EEPROM Module,Storage & Data Accessories,Elecrow,Source & stock to verify,Affiliate / partner listing
+BC-24-22,FRAM Module,Storage & Data Accessories,DFRobot,Source & stock to verify,Affiliate / partner listing
+BC-24-23,SPI Flash Module,Storage & Data Accessories,SparkFun,Source & stock to verify,Affiliate / partner listing
+BC-24-24,I2C EEPROM Board,Storage & Data Accessories,ROBOTIS,Source & stock to verify,Affiliate / partner listing
+BC-24-25,Real-Time Data Logger,Storage & Data Accessories,OpenELAB,Source & stock to verify,Affiliate / partner listing
+BC-24-26,Industrial Data Logger,Storage & Data Accessories,Opencircuit,Source & stock to verify,Affiliate / partner listing
+BC-24-27,Storage Expansion Board,Storage & Data Accessories,Seeed Studio,Source & stock to verify,Affiliate / partner listing
+BC-24-28,Network Storage Adapter,Storage & Data Accessories,RobotShop,Source & stock to verify,Affiliate / partner listing
+BC-24-29,Robotics Data Kit,Storage & Data Accessories,eBay,Source & stock to verify,Affiliate / partner listing
+BC-24-30,Data Storage Starter Kit,Storage & Data Accessories,Amazon,Source & stock to verify,Affiliate / partner listing
