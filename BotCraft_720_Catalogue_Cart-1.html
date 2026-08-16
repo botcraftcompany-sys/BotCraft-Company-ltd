@@ -31,7 +31,56 @@ function addToCart(b){let p=b.closest(".product"),id=p.dataset.id;if(!cart[id])c
 function changeQty(id,d){cart[id].qty+=d;if(cart[id].qty<=0)delete cart[id];renderCart()}
 function renderCart(){let a=Object.values(cart),n=a.reduce((s,x)=>s+x.qty,0);document.getElementById("cartCount").textContent=n;document.getElementById("totalItems").textContent=n;document.getElementById("cart").innerHTML=a.length?a.map(x=>"<div class='item'><b>"+x.name+"</b><br>"+x.id+"<br><button onclick="changeQty('"+x.id+"',-1)">−</button> "+x.qty+" <button onclick="changeQty('"+x.id+"',1)">+</button></div>").join(""):"<p>Your cart is empty.</p>"}
 function toggleCart(){let d=document.getElementById("drawer");d.style.display=d.style.display==="block"?"none":"block";renderCart()}
-function submitOrder(){let a=Object.values(cart);if(!a.length){alert("Your cart is empty.");return}let t="BotCraft order request:\n\n"+a.map(x=>x.qty+" x "+x.name+" (ID: "+x.id+")").join("\n")+"\n\nPayment and supplier checkout are not yet connected.";window.location.href="mailto:botcraftcompany@gmail.com?subject=BotCraft Order Request&body="+encodeURIComponent(t)}
+  async function submitOrder(){
+  let a = Object.values(cart);
+
+  if(!a.length){
+    alert("Your cart is empty.");
+    return;
+  }
+
+  const total = a.reduce((sum, item) => {
+    return sum + (Number(item.price) || 0) * item.qty;
+  }, 0);
+
+  try {
+    const response = await fetch(
+      "https://botcraft-company-ltd.botcraftcompany.workers.dev/api/paypal/create-order",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          amount: total
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    if(!response.ok){
+      throw new Error(data.error || "Unable to create PayPal order");
+    }
+
+    if(data.links){
+      const approveLink = data.links.find(
+        link => link.rel === "approve"
+      );
+
+      if(approveLink){
+        window.location.href = approveLink.href;
+        return;
+      }
+    }
+
+    alert("PayPal order was created, but no approval link was returned.");
+
+  } catch(error) {
+    console.error(error);
+    alert("Payment could not be started: " + error.message);
+  }
+  }
 function filter(){let q=document.getElementById("search").value.toLowerCase(),c=cat.value,s=sup.value,n=0;products.forEach(p=>{let ok=(!q||p.textContent.toLowerCase().includes(q))&&(!c||p.dataset.category===c)&&(!s||p.dataset.supplier===s);p.style.display=ok?"":"none";if(ok)n++});document.getElementById("count").textContent="Showing "+n+" of 720 products"}
 search.oninput=filter;cat.onchange=filter;sup.onchange=filter;renderCart();
 </script></body></html>
