@@ -231,7 +231,7 @@ async function submitCheckout(event){
 
     window.location.href = approveLink.href;
 
-  } catch(error) {
+  } catch}(error) {
     console.error("PayPal checkout error:", error);
     message.textContent = "Payment could not be started.";
     alert("PayPal error: " + error.message);
