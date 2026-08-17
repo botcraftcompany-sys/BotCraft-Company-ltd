@@ -55,6 +55,7 @@ export default {
       const data = await response.json();
       return data.access_token;
     }
+    
 
     // Create PayPal order
     if (url.pathname === "/api/paypal/create-order" && request.method === "POST") {
