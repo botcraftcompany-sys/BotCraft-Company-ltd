@@ -28,6 +28,7 @@ export default {
         }
       );
     }
+    
 
     // Get PayPal OAuth access token
     async function getPayPalAccessToken() {
