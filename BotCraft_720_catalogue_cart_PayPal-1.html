@@ -323,21 +323,25 @@ function displayCart(){
 
 }
 
-
 function checkout(){
-
   if(cart.length === 0){
-
     alert("Your cart is empty.");
-
     return;
-
   }
 
-  alert("Your cart is ready for checkout. Total: $" +
-        document.getElementById("cartTotal").innerHTML);
+  const checkoutSection = document.getElementById("checkout");
 
+  if(!checkoutSection){
+    alert("Checkout section not found.");
+    return;
+  }
+
+  checkoutSection.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 }
+
 
 </script>
 
