@@ -187,6 +187,31 @@ Total: $<span id="cartTotal">0.00</span>
 <button type="button" class="btn" onclick="checkout()">
   Proceed to Checkout
 </button>
+  <section id="checkout">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Checkout</div>
+      <h2>Complete your order</h2>
+      <p>Enter your details to continue to payment.</p>
+    </div>
+
+    <form id="checkoutForm">
+      <input id="customerName" required placeholder="Full name">
+
+      <input id="customerEmail" type="email" required placeholder="Email address">
+
+      <input id="customerPhone" placeholder="Phone number">
+
+      <textarea id="customerAddress" required placeholder="Delivery address"></textarea>
+
+      <button type="submit" class="btn">
+        Continue to Payment
+      </button>
+
+      <div id="checkoutMessage"></div>
+    </form>
+  </div>
+  </section>
 
 <script>
 
