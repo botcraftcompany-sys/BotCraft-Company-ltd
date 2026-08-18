@@ -252,7 +252,198 @@ export default {
       }
     }
 
-    // CATEGORIES API
+   // =========================================================
+// BULK PRODUCT IMPORT
+// =========================================================
+
+if (
+  url.pathname === "/api/products/import" &&
+  request.method === "POST"
+) {
+  try {
+    if (!env.DB) {
+      return Response.json(
+        {
+          error: "Database is not connected."
+        },
+        {
+          status: 500,
+          headers: corsHeaders
+        }
+      );
+    }
+
+    const body = await request.json();
+
+    if (
+      !body.products ||
+      !Array.isArray(body.products)
+    ) {
+      return Response.json(
+        {
+          error:
+            "Request must contain a products array."
+        },
+        {
+          status: 400,
+          headers: corsHeaders
+        }
+      );
+    }
+
+    if (body.products.length === 0) {
+      return Response.json(
+        {
+          error: "No products supplied."
+        },
+        {
+          status: 400,
+          headers: corsHeaders
+        }
+      );
+    }
+
+    if (body.products.length > 100) {
+      return Response.json(
+        {
+          error:
+            "Maximum 100 products per import request."
+        },
+        {
+          status: 400,
+          headers: corsHeaders
+        }
+      );
+    }
+
+    let imported = 0;
+    let skipped = 0;
+    const errors = [];
+
+    for (const product of body.products) {
+      try {
+        if (
+          !product.sku ||
+          !product.name ||
+          !product.category ||
+          product.price === undefined
+        ) {
+          skipped++;
+          errors.push({
+            sku: product.sku || null,
+            error:
+              "Missing sku, name, category, or price."
+          });
+          continue;
+        }
+
+        const price =
+          Number(product.price);
+
+        if (
+          !Number.isFinite(price) ||
+          price < 0
+        ) {
+          skipped++;
+          errors.push({
+            sku: product.sku,
+            error:
+              "Invalid product price."
+          });
+          continue;
+        }
+
+        const result =
+          await env.DB.prepare(`
+            INSERT OR IGNORE INTO products
+            (
+              sku,
+              name,
+              category,
+              description,
+              price,
+              currency,
+              image_url,
+              supplier,
+              supplier_url,
+              affiliate_url,
+              stock_status,
+              brand
+            )
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          `)
+            .bind(
+              String(product.sku),
+              String(product.name),
+              String(product.category),
+              product.description || null,
+              price,
+              product.currency || "USD",
+              product.image_url || null,
+              product.supplier || null,
+              product.supplier_url || null,
+              product.affiliate_url || null,
+              product.stock_status ||
+                "available",
+              product.brand || null
+            )
+            .run();
+
+        if (
+          result.meta &&
+          result.meta.changes > 0
+        ) {
+          imported++;
+        } else {
+          skipped++;
+        }
+
+      } catch (error) {
+        skipped++;
+
+        errors.push({
+          sku: product.sku || null,
+          error:
+            error.message ||
+            "Product import failed."
+        });
+      }
+    }
+
+    return Response.json(
+      {
+        success: true,
+        imported,
+        skipped,
+        total_received:
+          body.products.length,
+        errors
+      },
+      {
+        status: 200,
+        headers: corsHeaders
+      }
+    );
+
+  } catch (error) {
+    console.error(
+      "Bulk product import error:",
+      error
+    );
+
+    return Response.json(
+      {
+        error:
+          error.message ||
+          "Unable to import products."
+      },
+      {
+        status: 500,
+        headers: corsHeaders
+      }
+    );
+  }
+  } // CATEGORIES API
     if (
       url.pathname === "/api/categories" &&
       request.method === "GET"
