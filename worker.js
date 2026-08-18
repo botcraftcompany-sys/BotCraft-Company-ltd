@@ -8,7 +8,10 @@ export default {
       "Access-Control-Allow-Headers": "Content-Type"
     };
 
-    // Handle browser preflight
+    // =========================================================
+    // CORS / PREFLIGHT
+    // =========================================================
+
     if (request.method === "OPTIONS") {
       return new Response(null, {
         status: 204,
@@ -29,33 +32,21 @@ export default {
           products_api: env.DB ? "ready" : "not-ready"
         },
         {
+          status: 200,
           headers: corsHeaders
         }
       );
     }
 
-
     // =========================================================
-    // PRODUCT API
+    // GET PRODUCTS
     // =========================================================
-
-    // GET /api/products
-    //
-    // Examples:
-    //
-    // /api/products
-    // /api/products?page=1&limit=20
-    // /api/products?search=motor
-    // /api/products?category=Sensors
-    // /api/products?id=1
-    //
 
     if (
       url.pathname === "/api/products" &&
       request.method === "GET"
     ) {
       try {
-
         if (!env.DB) {
           return Response.json(
             {
@@ -69,14 +60,13 @@ export default {
         }
 
         // -----------------------------------------------------
-        // Individual product
+        // GET ONE PRODUCT
         // -----------------------------------------------------
 
         const productID =
           url.searchParams.get("id");
 
         if (productID) {
-
           const product =
             await env.DB.prepare(`
               SELECT
@@ -88,8 +78,12 @@ export default {
                 price,
                 currency,
                 image_url,
+                supplier,
+                supplier_url,
+                affiliate_url,
                 stock_status,
-                brand
+                brand,
+                created_at
               FROM products
               WHERE id = ?
               LIMIT 1
@@ -114,28 +108,37 @@ export default {
               product
             },
             {
+              status: 200,
               headers: corsHeaders
             }
           );
         }
 
-
         // -----------------------------------------------------
-        // Pagination
+        // PAGINATION
         // -----------------------------------------------------
 
         let page =
-          Number(url.searchParams.get("page") || 1);
+          Number(
+            url.searchParams.get("page") || 1
+          );
 
         let limit =
-          Number(url.searchParams.get("limit") || 20);
+          Number(
+            url.searchParams.get("limit") || 20
+          );
 
-        // Protect the API from huge requests
-        if (!Number.isFinite(page) || page < 1) {
+        if (
+          !Number.isFinite(page) ||
+          page < 1
+        ) {
           page = 1;
         }
 
-        if (!Number.isFinite(limit) || limit < 1) {
+        if (
+          !Number.isFinite(limit) ||
+          limit < 1
+        ) {
           limit = 20;
         }
 
@@ -143,12 +146,14 @@ export default {
           limit = 100;
         }
 
+        page = Math.floor(page);
+        limit = Math.floor(limit);
+
         const offset =
           (page - 1) * limit;
 
-
         // -----------------------------------------------------
-        // Search and category
+        // SEARCH / CATEGORY
         // -----------------------------------------------------
 
         const search =
@@ -157,34 +162,17 @@ export default {
         const category =
           url.searchParams.get("category");
 
-
-        let query = `
-          SELECT
-            id,
-            sku,
-            name,
-            category,
-            description,
-            price,
-            currency,
-            image_url,
-            stock_status,
-            brand
-          FROM products
-        `;
-
-        const conditions = [];
-        const bindings = [];
-
+        let conditions = [];
+        let bindings = [];
 
         if (search) {
-
           conditions.push(`
             (
               name LIKE ?
               OR sku LIKE ?
               OR description LIKE ?
               OR brand LIKE ?
+              OR supplier LIKE ?
             )
           `);
 
@@ -195,13 +183,12 @@ export default {
             searchTerm,
             searchTerm,
             searchTerm,
+            searchTerm,
             searchTerm
           );
         }
 
-
         if (category) {
-
           conditions.push(
             "category = ?"
           );
@@ -209,102 +196,95 @@ export default {
           bindings.push(category);
         }
 
+        let whereClause = "";
 
         if (conditions.length > 0) {
-
-          query +=
+          whereClause =
             " WHERE " +
             conditions.join(" AND ");
         }
 
+        // -----------------------------------------------------
+        // PRODUCT QUERY
+        // -----------------------------------------------------
 
-        query += `
+        const productQuery = `
+          SELECT
+            id,
+            sku,
+            name,
+            category,
+            description,
+            price,
+            currency,
+            image_url,
+            supplier,
+            supplier_url,
+            affiliate_url,
+            stock_status,
+            brand,
+            created_at
+          FROM products
+          ${whereClause}
           ORDER BY id DESC
           LIMIT ? OFFSET ?
         `;
 
-        bindings.push(
+        const productBindings = [
+          ...bindings,
           limit,
           offset
-        );
-
-
-        // -----------------------------------------------------
-        // Get products
-        // -----------------------------------------------------
+        ];
 
         const result =
-          await env.DB.prepare(query)
-            .bind(...bindings)
+          await env.DB
+            .prepare(productQuery)
+            .bind(...productBindings)
             .all();
 
-
         // -----------------------------------------------------
-        // Get total count
+        // COUNT PRODUCTS
         // -----------------------------------------------------
 
-        let countQuery =
-          "SELECT COUNT(*) AS total FROM products";
-
-        const countBindings = [];
-
-        if (conditions.length > 0) {
-
-          countQuery +=
-            " WHERE " +
-            conditions.join(" AND ");
-
-          /*
-            Rebuild the count bindings because
-            LIMIT/OFFSET are not used here.
-          */
-          if (search) {
-
-            const searchTerm =
-              `%${search}%`;
-
-            countBindings.push(
-              searchTerm,
-              searchTerm,
-              searchTerm,
-              searchTerm
-            );
-          }
-
-          if (category) {
-            countBindings.push(category);
-          }
-        }
-
+        const countQuery = `
+          SELECT COUNT(*) AS total
+          FROM products
+          ${whereClause}
+        `;
 
         const countResult =
-          await env.DB.prepare(countQuery)
-            .bind(...countBindings)
+          await env.DB
+            .prepare(countQuery)
+            .bind(...bindings)
             .first();
 
         const total =
-          Number(countResult?.total || 0);
-
+          Number(
+            countResult?.total || 0
+          );
 
         return Response.json(
           {
-            products: result.results || [],
+            products:
+              result.results || [],
 
             pagination: {
               page,
               limit,
               total,
               total_pages:
-                Math.ceil(total / limit)
+                Math.ceil(
+                  total / limit
+                )
             }
           },
           {
+            status: 200,
             headers: corsHeaders
           }
         );
 
       } catch (error) {
-
         console.error(
           "Products API error:",
           error
@@ -324,7 +304,6 @@ export default {
       }
     }
 
-
     // =========================================================
     // PRODUCT CATEGORIES
     // =========================================================
@@ -334,11 +313,11 @@ export default {
       request.method === "GET"
     ) {
       try {
-
         if (!env.DB) {
           return Response.json(
             {
-              error: "Database is not connected."
+              error:
+                "Database is not connected."
             },
             {
               status: 500,
@@ -354,23 +333,24 @@ export default {
             WHERE category IS NOT NULL
               AND category != ''
             ORDER BY category ASC
-          `)
-            .all();
+          `).all();
 
         return Response.json(
           {
             categories:
-              (result.results || []).map(
-                item => item.category
-              )
+              (result.results || [])
+                .map(
+                  item =>
+                    item.category
+                )
           },
           {
+            status: 200,
             headers: corsHeaders
           }
         );
 
       } catch (error) {
-
         console.error(
           "Categories API error:",
           error
@@ -390,13 +370,11 @@ export default {
       }
     }
 
-
     // =========================================================
     // PAYPAL ACCESS TOKEN
     // =========================================================
 
     async function getPayPalAccessToken() {
-
       if (
         !env.PAYPAL_CLIENT_ID ||
         !env.PAYPAL_CLIENT_SECRET
@@ -437,7 +415,6 @@ export default {
         await response.json();
 
       if (!response.ok) {
-
         throw new Error(
           data.error_description ||
           data.error ||
@@ -446,7 +423,6 @@ export default {
       }
 
       if (!data.access_token) {
-
         throw new Error(
           "PayPal did not return an access token."
         );
@@ -455,45 +431,36 @@ export default {
       return data.access_token;
     }
 
-
     // =========================================================
-    // SAVE SUCCESSFUL ORDER TO D1
+    // SAVE ORDER TO D1
     // =========================================================
 
     async function saveOrderToDatabase(
       paypalData,
       orderID
     ) {
-
       if (!env.DB) {
-
         console.error(
           "D1 database binding DB is missing."
         );
-
         return;
       }
 
       try {
-
         const purchaseUnit =
-          paypalData.purchase_units &&
-          paypalData.purchase_units[0];
+          paypalData.purchase_units?.[0];
 
         const amount =
-          purchaseUnit &&
-          purchaseUnit.amount
+          purchaseUnit?.amount
             ? Number(
                 purchaseUnit.amount.value
               )
             : 0;
 
         const currency =
-          purchaseUnit &&
-          purchaseUnit.amount &&
-          purchaseUnit.amount.currency_code
-            ? purchaseUnit.amount.currency_code
-            : "USD";
+          purchaseUnit?.amount
+            ?.currency_code ||
+          "USD";
 
         const payer =
           paypalData.payer || {};
@@ -504,13 +471,13 @@ export default {
             : null;
 
         const customerEmail =
-          payer.email_address || null;
+          payer.email_address ||
+          null;
 
         const items =
           JSON.stringify(
             purchaseUnit || {}
           );
-
 
         await env.DB.prepare(`
           INSERT OR IGNORE INTO orders
@@ -537,21 +504,18 @@ export default {
           )
           .run();
 
-
         console.log(
           "Order saved to D1:",
           orderID
         );
 
       } catch (error) {
-
         console.error(
           "D1 order save error:",
           error
         );
       }
     }
-
 
     // =========================================================
     // CREATE PAYPAL ORDER
@@ -562,9 +526,7 @@ export default {
         "/api/paypal/create-order" &&
       request.method === "POST"
     ) {
-
       try {
-
         const body =
           await request.json();
 
@@ -575,7 +537,6 @@ export default {
           !Number.isFinite(amount) ||
           amount <= 0
         ) {
-
           return Response.json(
             {
               error:
@@ -588,10 +549,8 @@ export default {
           );
         }
 
-
         const accessToken =
           await getPayPalAccessToken();
-
 
         const paypalResponse =
           await fetch(
@@ -627,7 +586,6 @@ export default {
                   ],
 
                   application_context: {
-
                     brand_name:
                       "BotCraft",
 
@@ -647,10 +605,8 @@ export default {
             }
           );
 
-
         const data =
           await paypalResponse.json();
-
 
         return Response.json(
           data,
@@ -664,7 +620,6 @@ export default {
         );
 
       } catch (error) {
-
         console.error(
           "Create order error:",
           error
@@ -684,7 +639,6 @@ export default {
       }
     }
 
-
     // =========================================================
     // CAPTURE PAYPAL ORDER
     // =========================================================
@@ -695,15 +649,13 @@ export default {
       ) &&
       request.method === "POST"
     ) {
-
       try {
-
         const orderID =
-          url.pathname.split("/").pop();
-
+          url.pathname
+            .split("/")
+            .pop();
 
         if (!orderID) {
-
           return Response.json(
             {
               error:
@@ -716,16 +668,12 @@ export default {
           );
         }
 
-
         const accessToken =
           await getPayPalAccessToken();
 
-
         const paypalResponse =
           await fetch(
-
             `https://api-m.sandbox.paypal.com/v2/checkout/orders/${orderID}/capture`,
-
             {
               method: "POST",
 
@@ -745,22 +693,19 @@ export default {
             }
           );
 
-
         const data =
           await paypalResponse.json();
 
-
         if (
           paypalResponse.ok &&
-          data.status === "COMPLETED"
+          data.status ===
+            "COMPLETED"
         ) {
-
           await saveOrderToDatabase(
             data,
             orderID
           );
         }
-
 
         return Response.json(
           data,
@@ -774,7 +719,6 @@ export default {
         );
 
       } catch (error) {
-
         console.error(
           "Capture error:",
           error
@@ -794,24 +738,20 @@ export default {
       }
     }
 
-
     // =========================================================
-    // PAYPAL PAYMENT SUCCESS RETURN
+    // PAYPAL SUCCESS
     // =========================================================
 
     if (
       url.pathname ===
       "/api/paypal/payment-success"
     ) {
-
       const orderID =
         url.searchParams.get(
           "token"
         );
 
-
       if (!orderID) {
-
         return new Response(
           "PayPal returned without an order ID.",
           {
@@ -827,18 +767,13 @@ export default {
         );
       }
 
-
       try {
-
         const accessToken =
           await getPayPalAccessToken();
 
-
         const paypalResponse =
           await fetch(
-
             `https://api-m.sandbox.paypal.com/v2/checkout/orders/${orderID}/capture`,
-
             {
               method: "POST",
 
@@ -858,13 +793,10 @@ export default {
             }
           );
 
-
         const data =
           await paypalResponse.json();
 
-
         if (!paypalResponse.ok) {
-
           return Response.json(
             {
               error:
@@ -883,105 +815,137 @@ export default {
           );
         }
 
-
         if (
           data.status ===
           "COMPLETED"
         ) {
-
           await saveOrderToDatabase(
             data,
             orderID
           );
         }
 
-
         return new Response(
           `
-          <!DOCTYPE html>
+<!DOCTYPE html>
+<html>
 
-          <html>
+<head>
 
-          <head>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
 
-          <meta name="viewport"
-                content="width=device-width, initial-scale=1">
+<title>BotCraft Payment Successful</title>
 
-          <title>
-          BotCraft Payment Successful
-          </title>
+<style>
 
-          <style>
+body{
+  font-family:Arial,sans-serif;
+  background:#07111f;
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+}
 
-          body{
-            font-family:Arial,sans-serif;
-            background:#07111f;
-            color:white;
-            text-align:center;
-            padding:60px 20px;
-          }
+.box{
+  max-width:600px;
+  margin:auto;
+  background:#0d1b2e;
+  padding:40px;
+  border-radius:18px;
+  border:1px solid #20324a;
+}
 
-          .box{
-            max-width:600px;
-            margin:auto;
-            background:#0d1b2e;
-            padding:40px;
-            border-radius:18px;
-            border:1px solid #20324a;
-          }
+h1{
+  color:#42e8a4;
+}
 
-          h1{
-            color:#42e8a4;
-          }
+.order{
+  color:#9db0c7;
+  word-break:break-all;
+}
 
-          .order{
-            color:#9db0c7;
-            word-break:break-all;
-          }
+a{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 20px;
+  background:#42e8a4;
+  color:#03100a;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
 
-          a{
-            display:inline-block;
-            margin-top:25px;
-            padding:13px 20px;
-            background:#42e8a4;
-            color:#03100a;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-          }
+</style>
 
-          </style>
+</head>
 
-          </head>
+<body>
 
-          <body>
+<div class="box">
 
-          <div class="box">
+<h1>
+Payment Successful! 🎉
+</h1>
 
-          <h1>
-          Payment Successful! 🎉
-          </h1>
+<p>
+Thank you for your BotCraft order.
+</p>
 
-          <p>
-          Thank you for your BotCraft order.
-          </p>
+<p class="order">
+PayPal Order ID:<br>
+${orderID}
+</p>
 
-          <p class="order">
-          PayPal Order ID:<br>
-          ${orderID}
-          </p>
+<a href="/">
+Return to BotCraft
+</a>
 
-          <a href="/">
-          Return to BotCraft
-          </a>
+</div>
 
-          </div>
+</body>
 
-          </body>
-
-          </html>
+</html>
           `,
           {
             status: 200,
 
-       
+            headers: {
+              ...corsHeaders,
+
+              "Content-Type":
+                "text/html;charset=UTF-8"
+            }
+          }
+        );
+
+      } catch (error) {
+        console.error(
+          "Payment success error:",
+          error
+        );
+
+        return new Response(
+          "Payment capture error: " +
+            error.message,
+          {
+            status: 500,
+
+            headers: {
+              ...corsHeaders,
+
+              "Content-Type":
+                "text/plain;charset=UTF-8"
+            }
+          }
+        );
+      }
+    }
+
+    // =========================================================
+    // PAYPAL CANCEL
+    // =========================================================
+
+    if (
+      url.pathname ===
+  
