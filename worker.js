@@ -21,7 +21,8 @@ export default {
       return Response.json(
         {
           status: "ok",
-          paypal: "sandbox-ready"
+          paypal: "sandbox-ready",
+          database: env.DB ? "connected" : "not-connected"
         },
         {
           headers: corsHeaders
@@ -67,6 +68,96 @@ export default {
       }
 
       return data.access_token;
+    }
+
+
+    // SAVE SUCCESSFUL ORDER TO D1
+    async function saveOrderToDatabase(paypalData, orderID) {
+      if (!env.DB) {
+        console.error("D1 database binding DB is missing.");
+        return;
+      }
+
+      try {
+        const purchaseUnit =
+          paypalData.purchase_units &&
+          paypalData.purchase_units[0];
+
+        const amount =
+          purchaseUnit &&
+          purchaseUnit.amount
+            ? Number(purchaseUnit.amount.value)
+            : 0;
+
+        const currency =
+          purchaseUnit &&
+          purchaseUnit.amount &&
+          purchaseUnit.amount.currency_code
+            ? purchaseUnit.amount.currency_code
+            : "USD";
+
+        const payer =
+          paypalData.payer || {};
+
+        const customerName =
+          payer.name
+            ? `${payer.name.given_name || ""} ${payer.name.surname || ""}`.trim()
+            : null;
+
+        const customerEmail =
+          payer.email_address || null;
+
+        /*
+          At this stage the existing PayPal create-order
+          request only sends the total amount.
+
+          We therefore store the PayPal purchase-unit
+          information as JSON. We can connect the exact
+          cart products in the next step.
+        */
+        const items = JSON.stringify(
+          purchaseUnit || {}
+        );
+
+        await env.DB.prepare(`
+          INSERT OR IGNORE INTO orders
+          (
+            paypal_order_id,
+            customer_name,
+            customer_email,
+            items,
+            amount,
+            currency,
+            status
+          )
+          VALUES (?, ?, ?, ?, ?, ?, ?)
+        `)
+          .bind(
+            orderID,
+            customerName,
+            customerEmail,
+            items,
+            amount,
+            currency,
+            paypalData.status || "COMPLETED"
+          )
+          .run();
+
+        console.log(
+          "Order saved to D1:",
+          orderID
+        );
+
+      } catch (error) {
+        /*
+          Do not break a successful PayPal payment
+          just because database recording failed.
+        */
+        console.error(
+          "D1 order save error:",
+          error
+        );
+      }
     }
 
 
@@ -214,6 +305,17 @@ export default {
         const data =
           await paypalResponse.json();
 
+        // Save successful payment to D1
+        if (
+          paypalResponse.ok &&
+          data.status === "COMPLETED"
+        ) {
+          await saveOrderToDatabase(
+            data,
+            orderID
+          );
+        }
+
         return Response.json(
           data,
           {
@@ -303,6 +405,14 @@ export default {
               status: paypalResponse.status,
               headers: corsHeaders
             }
+          );
+        }
+
+        // Save successful payment to D1
+        if (data.status === "COMPLETED") {
+          await saveOrderToDatabase(
+            data,
+            orderID
           );
         }
 
@@ -497,7 +607,6 @@ export default {
 
 
     // Prevent the ASSETS error
-    // If an Assets binding exists, use it.
     if (
       env.ASSETS &&
       typeof env.ASSETS.fetch === "function"
@@ -506,7 +615,7 @@ export default {
     }
 
 
-    // Fallback response when no ASSETS binding exists
+    // Fallback response
     return Response.json(
       {
         status: "ok",
@@ -514,7 +623,7 @@ export default {
       },
       {
         status: 200,
-        headers: corsHeaders 
+        headers: corsHeaders
       }
     );
   }
