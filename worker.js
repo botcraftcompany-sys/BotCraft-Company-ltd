@@ -514,7 +514,7 @@ export default {
       },
       {
         status: 200,
-        headers: corsHeadersi 
+        headers: corsHeaders 
       }
     );
   }
