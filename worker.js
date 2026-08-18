@@ -8,10 +8,6 @@ export default {
       "Access-Control-Allow-Headers": "Content-Type"
     };
 
-    // =========================================================
-    // CORS / PREFLIGHT
-    // =========================================================
-
     if (request.method === "OPTIONS") {
       return new Response(null, {
         status: 204,
@@ -19,10 +15,7 @@ export default {
       });
     }
 
-    // =========================================================
     // HEALTH CHECK
-    // =========================================================
-
     if (url.pathname === "/api/health") {
       return Response.json(
         {
@@ -31,17 +24,11 @@ export default {
           database: env.DB ? "connected" : "not-connected",
           products_api: env.DB ? "ready" : "not-ready"
         },
-        {
-          status: 200,
-          headers: corsHeaders
-        }
+        { headers: corsHeaders }
       );
     }
 
-    // =========================================================
-    // GET PRODUCTS
-    // =========================================================
-
+    // PRODUCTS API
     if (
       url.pathname === "/api/products" &&
       request.method === "GET"
@@ -49,19 +36,13 @@ export default {
       try {
         if (!env.DB) {
           return Response.json(
-            {
-              error: "Database is not connected."
-            },
+            { error: "Database is not connected." },
             {
               status: 500,
               headers: corsHeaders
             }
           );
         }
-
-        // -----------------------------------------------------
-        // GET ONE PRODUCT
-        // -----------------------------------------------------
 
         const productID =
           url.searchParams.get("id");
@@ -93,9 +74,7 @@ export default {
 
           if (!product) {
             return Response.json(
-              {
-                error: "Product not found."
-              },
+              { error: "Product not found." },
               {
                 status: 404,
                 headers: corsHeaders
@@ -104,19 +83,10 @@ export default {
           }
 
           return Response.json(
-            {
-              product
-            },
-            {
-              status: 200,
-              headers: corsHeaders
-            }
+            { product },
+            { headers: corsHeaders }
           );
         }
-
-        // -----------------------------------------------------
-        // PAGINATION
-        // -----------------------------------------------------
 
         let page =
           Number(
@@ -128,17 +98,11 @@ export default {
             url.searchParams.get("limit") || 20
           );
 
-        if (
-          !Number.isFinite(page) ||
-          page < 1
-        ) {
+        if (!Number.isFinite(page) || page < 1) {
           page = 1;
         }
 
-        if (
-          !Number.isFinite(limit) ||
-          limit < 1
-        ) {
+        if (!Number.isFinite(limit) || limit < 1) {
           limit = 20;
         }
 
@@ -152,18 +116,14 @@ export default {
         const offset =
           (page - 1) * limit;
 
-        // -----------------------------------------------------
-        // SEARCH / CATEGORY
-        // -----------------------------------------------------
-
         const search =
           url.searchParams.get("search");
 
         const category =
           url.searchParams.get("category");
 
-        let conditions = [];
-        let bindings = [];
+        const conditions = [];
+        const bindings = [];
 
         if (search) {
           conditions.push(`
@@ -176,15 +136,14 @@ export default {
             )
           `);
 
-          const searchTerm =
-            `%${search}%`;
+          const term = `%${search}%`;
 
           bindings.push(
-            searchTerm,
-            searchTerm,
-            searchTerm,
-            searchTerm,
-            searchTerm
+            term,
+            term,
+            term,
+            term,
+            term
           );
         }
 
@@ -198,15 +157,11 @@ export default {
 
         let whereClause = "";
 
-        if (conditions.length > 0) {
+        if (conditions.length) {
           whereClause =
             " WHERE " +
             conditions.join(" AND ");
         }
-
-        // -----------------------------------------------------
-        // PRODUCT QUERY
-        // -----------------------------------------------------
 
         const productQuery = `
           SELECT
@@ -230,21 +185,15 @@ export default {
           LIMIT ? OFFSET ?
         `;
 
-        const productBindings = [
-          ...bindings,
-          limit,
-          offset
-        ];
-
         const result =
           await env.DB
             .prepare(productQuery)
-            .bind(...productBindings)
+            .bind(
+              ...bindings,
+              limit,
+              offset
+            )
             .all();
-
-        // -----------------------------------------------------
-        // COUNT PRODUCTS
-        // -----------------------------------------------------
 
         const countQuery = `
           SELECT COUNT(*) AS total
@@ -279,7 +228,6 @@ export default {
             }
           },
           {
-            status: 200,
             headers: corsHeaders
           }
         );
@@ -304,10 +252,7 @@ export default {
       }
     }
 
-    // =========================================================
-    // PRODUCT CATEGORIES
-    // =========================================================
-
+    // CATEGORIES API
     if (
       url.pathname === "/api/categories" &&
       request.method === "GET"
@@ -340,12 +285,10 @@ export default {
             categories:
               (result.results || [])
                 .map(
-                  item =>
-                    item.category
+                  item => item.category
                 )
           },
           {
-            status: 200,
             headers: corsHeaders
           }
         );
@@ -369,8 +312,7 @@ export default {
         );
       }
     }
-
-    // =========================================================
+        // =========================================================
     // PAYPAL ACCESS TOKEN
     // =========================================================
 
@@ -384,32 +326,26 @@ export default {
         );
       }
 
-      const credentials =
-        btoa(
-          `${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`
-        );
+      const credentials = btoa(
+        `${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`
+      );
 
-      const response =
-        await fetch(
-          "https://api-m.sandbox.paypal.com/v1/oauth2/token",
-          {
-            method: "POST",
-
-            headers: {
-              "Authorization":
-                `Basic ${credentials}`,
-
-              "Content-Type":
-                "application/x-www-form-urlencoded",
-
-              "Accept":
-                "application/json"
-            },
-
-            body:
-              "grant_type=client_credentials"
-          }
-        );
+      const response = await fetch(
+        "https://api-m.sandbox.paypal.com/v1/oauth2/token",
+        {
+          method: "POST",
+          headers: {
+            "Authorization":
+              `Basic ${credentials}`,
+            "Content-Type":
+              "application/x-www-form-urlencoded",
+            "Accept":
+              "application/json"
+          },
+          body:
+            "grant_type=client_credentials"
+        }
+      );
 
       const data =
         await response.json();
@@ -431,8 +367,9 @@ export default {
       return data.access_token;
     }
 
+
     // =========================================================
-    // SAVE ORDER TO D1
+    // SAVE SUCCESSFUL ORDER TO D1
     // =========================================================
 
     async function saveOrderToDatabase(
@@ -458,8 +395,7 @@ export default {
             : 0;
 
         const currency =
-          purchaseUnit?.amount
-            ?.currency_code ||
+          purchaseUnit?.amount?.currency_code ||
           "USD";
 
         const payer =
@@ -471,8 +407,7 @@ export default {
             : null;
 
         const customerEmail =
-          payer.email_address ||
-          null;
+          payer.email_address || null;
 
         const items =
           JSON.stringify(
@@ -516,6 +451,7 @@ export default {
         );
       }
     }
+
 
     // =========================================================
     // CREATE PAYPAL ORDER
@@ -639,6 +575,7 @@ export default {
       }
     }
 
+
     // =========================================================
     // CAPTURE PAYPAL ORDER
     // =========================================================
@@ -737,9 +674,8 @@ export default {
         );
       }
     }
-
-    // =========================================================
-    // PAYPAL SUCCESS
+        // =========================================================
+    // PAYPAL PAYMENT SUCCESS RETURN
     // =========================================================
 
     if (
@@ -747,19 +683,15 @@ export default {
       "/api/paypal/payment-success"
     ) {
       const orderID =
-        url.searchParams.get(
-          "token"
-        );
+        url.searchParams.get("token");
 
       if (!orderID) {
         return new Response(
           "PayPal returned without an order ID.",
           {
             status: 400,
-
             headers: {
               ...corsHeaders,
-
               "Content-Type":
                 "text/plain;charset=UTF-8"
             }
@@ -776,17 +708,13 @@ export default {
             `https://api-m.sandbox.paypal.com/v2/checkout/orders/${orderID}/capture`,
             {
               method: "POST",
-
               headers: {
                 "Content-Type":
                   "application/json",
-
                 "Authorization":
                   `Bearer ${accessToken}`,
-
                 "Accept":
                   "application/json",
-
                 "Prefer":
                   "return=representation"
               }
@@ -801,14 +729,11 @@ export default {
             {
               error:
                 "PayPal payment could not be captured.",
-
-              paypal:
-                data
+              paypal: data
             },
             {
               status:
                 paypalResponse.status,
-
               headers:
                 corsHeaders
             }
@@ -826,19 +751,13 @@ export default {
         }
 
         return new Response(
-          `
-<!DOCTYPE html>
+          `<!DOCTYPE html>
 <html>
-
 <head>
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BotCraft Payment Successful</title>
 
 <style>
-
 body{
   font-family:Arial,sans-serif;
   background:#07111f;
@@ -875,7 +794,6 @@ a{
   border-radius:8px;
   font-weight:bold;
 }
-
 </style>
 
 </head>
@@ -884,9 +802,7 @@ a{
 
 <div class="box">
 
-<h1>
-Payment Successful! 🎉
-</h1>
+<h1>Payment Successful! 🎉</h1>
 
 <p>
 Thank you for your BotCraft order.
@@ -904,15 +820,11 @@ Return to BotCraft
 </div>
 
 </body>
-
-</html>
-          `,
+</html>`,
           {
             status: 200,
-
             headers: {
               ...corsHeaders,
-
               "Content-Type":
                 "text/html;charset=UTF-8"
             }
@@ -927,13 +839,11 @@ Return to BotCraft
 
         return new Response(
           "Payment capture error: " +
-            error.message,
+          error.message,
           {
             status: 500,
-
             headers: {
               ...corsHeaders,
-
               "Content-Type":
                 "text/plain;charset=UTF-8"
             }
@@ -942,10 +852,106 @@ Return to BotCraft
       }
     }
 
+
     // =========================================================
-    // PAYPAL CANCEL
+    // PAYPAL PAYMENT CANCEL
     // =========================================================
 
     if (
       url.pathname ===
-  
+      "/api/paypal/payment-cancel"
+    ) {
+      return new Response(
+        `<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment Cancelled</title>
+
+<style>
+body{
+  font-family:Arial,sans-serif;
+  background:#07111f;
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+}
+
+h1{
+  color:#42e8a4;
+}
+
+a{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 20px;
+  background:#42e8a4;
+  color:#03100a;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Payment Cancelled</h1>
+
+<p>
+Your PayPal payment was cancelled.
+</p>
+
+<a href="/">
+Return to BotCraft
+</a>
+
+</body>
+</html>`,
+        {
+          status: 200,
+          headers: {
+            ...corsHeaders,
+            "Content-Type":
+              "text/html;charset=UTF-8"
+          }
+        }
+      );
+    }
+
+
+    // =========================================================
+    // ASSETS
+    // =========================================================
+
+    if (
+      env.ASSETS &&
+      typeof env.ASSETS.fetch ===
+        "function"
+    ) {
+      return env.ASSETS.fetch(
+        request
+      );
+    }
+
+
+    // =========================================================
+    // FALLBACK
+    // =========================================================
+
+    return Response.json(
+      {
+        status: "ok",
+        message:
+          "BotCraft PayPal Worker is running."
+      },
+      {
+        status: 200,
+        headers:
+          corsHeaders
+      }
+    );
+  }
+};
