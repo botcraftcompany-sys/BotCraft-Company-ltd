@@ -360,6 +360,58 @@ function checkout(){
     alert("Checkout section not found.");
     return;
   }
+  async function startPayPalPayment(){
+
+  if(cart.length === 0){
+    alert("Your cart is empty.");
+    return;
+  }
+
+  const message = document.getElementById("checkoutMessage");
+  message.textContent = "Connecting to PayPal...";
+
+  let total = 0;
+
+  for(var i = 0; i < cart.length; i++){
+    total += Number(cart[i].price) * Number(cart[i].quantity);
+  }
+
+  try {
+    const response = await fetch(
+      "https://botcraft-company-ltd.botcraftcompany.workers.dev/api/paypal/create-order",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          amount: total.toFixed(2)
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    if(!response.ok){
+      throw new Error(data.error || "PayPal order creation failed.");
+    }
+
+    const approvalLink = data.links.find(function(link){
+      return link.rel === "approve";
+    });
+
+    if(!approvalLink){
+      throw new Error("PayPal approval link was not returned.");
+    }
+
+    window.location.href = approvalLink.href;
+
+  } catch(error) {
+    console.error(error);
+    message.textContent = "Payment could not be started.";
+    alert("PayPal error: " + error.message);
+  }
+      }
 
   checkoutSection.scrollIntoView({
     behavior: "smooth",
