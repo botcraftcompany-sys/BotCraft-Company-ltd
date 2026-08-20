@@ -461,16 +461,51 @@ async function startPayPalPayment(){
     }
 
 
-    var approvalLink =
-      data.links.find(function(link){
+    var approvalLink = null;
 
-        return (
-          link &&
-          link.rel === "approve" &&
-          link.href
-        );
+if(data && Array.isArray(data.links)){
 
-      });
+  approvalLink =
+    data.links.find(function(link){
+
+      return (
+        link &&
+        link.rel === "approve" &&
+        link.href
+      );
+
+    });
+
+}
+
+if(!approvalLink && data && data.approvalUrl){
+
+  approvalLink = {
+    href: data.approvalUrl
+  };
+
+}
+
+if(!approvalLink && data && data.approval_url){
+
+  approvalLink = {
+    href: data.approval_url
+  };
+
+}
+
+if(!approvalLink){
+
+  console.error(
+    "PayPal response:",
+    data
+  );
+
+  throw new Error(
+    "PayPal approval link was not returned by the server."
+  );
+
+      }
 
 
     if(!approvalLink){
