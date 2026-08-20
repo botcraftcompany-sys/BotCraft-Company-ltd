@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BotCraft | Robotics Store</title>
 
 <style>
@@ -70,6 +71,11 @@ button:hover{
   opacity:.85;
 }
 
+button:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
 .cart{
   margin-top:30px;
 }
@@ -77,6 +83,15 @@ button:hover{
 .cart-item{
   padding:15px 0;
   border-bottom:1px solid #20324a;
+}
+
+.cart-controls{
+  margin-top:10px;
+}
+
+.cart-controls button{
+  padding:7px 11px;
+  margin-right:5px;
 }
 
 .total{
@@ -119,9 +134,11 @@ button:hover{
 }
 
 @media(max-width:700px){
+
   .grid{
     grid-template-columns:1fr;
   }
+
 }
 </style>
 </head>
@@ -129,95 +146,197 @@ button:hover{
 <body>
 
 <header>
+
   <h1>BOTCRAFT</h1>
+
   <p>Raspberry Pi Robotics Accessories</p>
+
 </header>
 
+
 <section>
+
 <div class="container">
 
 <h2>Robotics Products</h2>
 
+
 <div class="grid">
 
+
 <div class="card">
+
 <h3>⚙️ Motors & Motion</h3>
-<p>Motors, wheels, servos and motion accessories.</p>
-<p><strong>$25</strong></p>
-<button type="button" onclick="addToCart('Motors & Motion',25)">
+
+<p>
+Motors, wheels, servos and motion accessories.
+</p>
+
+<p>
+<strong>$25</strong>
+</p>
+
+<button
+  type="button"
+  onclick="addToCart('Motors & Motion',25)"
+>
 Add to Cart
 </button>
+
 </div>
 
+
 <div class="card">
+
 <h3>◉ Sensor Module</h3>
-<p>Practical sensors for robotics and automation.</p>
-<p><strong>$12</strong></p>
-<button type="button" onclick="addToCart('Sensor Module',12)">
+
+<p>
+Practical sensors for robotics and automation.
+</p>
+
+<p>
+<strong>$12</strong>
+</p>
+
+<button
+  type="button"
+  onclick="addToCart('Sensor Module',12)"
+>
 Add to Cart
 </button>
+
 </div>
 
+
 <div class="card">
+
 <h3>▣ Robot Chassis</h3>
-<p>Chassis and structural parts for robot projects.</p>
-<p><strong>$35</strong></p>
-<button type="button" onclick="addToCart('Robot Chassis',35)">
+
+<p>
+Chassis and structural parts for robot projects.
+</p>
+
+<p>
+<strong>$35</strong>
+</p>
+
+<button
+  type="button"
+  onclick="addToCart('Robot Chassis',35)"
+>
 Add to Cart
 </button>
+
 </div>
 
+
 <div class="card">
+
 <h3>⌁ GPIO Wiring Kit</h3>
-<p>Connectors, jumper wires and GPIO accessories.</p>
-<p><strong>$10</strong></p>
-<button type="button" onclick="addToCart('GPIO Wiring Kit',10)">
+
+<p>
+Connectors, jumper wires and GPIO accessories.
+</p>
+
+<p>
+<strong>$10</strong>
+</p>
+
+<button
+  type="button"
+  onclick="addToCart('GPIO Wiring Kit',10)"
+>
 Add to Cart
 </button>
+
 </div>
 
+
 <div class="card">
+
 <h3>◫ Camera Mount</h3>
-<p>Mounting accessories for Raspberry Pi cameras.</p>
-<p><strong>$15</strong></p>
-<button type="button" onclick="addToCart('Camera Mount',15)">
+
+<p>
+Mounting accessories for Raspberry Pi cameras.
+</p>
+
+<p>
+<strong>$15</strong>
+</p>
+
+<button
+  type="button"
+  onclick="addToCart('Camera Mount',15)"
+>
 Add to Cart
 </button>
+
 </div>
+
 
 <div class="card">
+
 <h3>⚡ Power Accessory</h3>
-<p>Power accessories and robotics upgrades.</p>
-<p><strong>$20</strong></p>
-<button type="button" onclick="addToCart('Power Accessory',20)">
+
+<p>
+Power accessories and robotics upgrades.
+</p>
+
+<p>
+<strong>$20</strong>
+</p>
+
+<button
+  type="button"
+  onclick="addToCart('Power Accessory',20)"
+>
 Add to Cart
 </button>
-</div>
 
 </div>
+
+
+</div>
+
 
 <div class="cart" id="cart">
 
-<h2>🛒 Your Cart (<span id="cartCount">0</span>)</h2>
+<h2>
+🛒 Your Cart
+(<span id="cartCount">0</span>)
+</h2>
+
 
 <div id="cartItems">
 Your cart is empty.
 </div>
 
+
 <div class="total">
-Total: $<span id="cartTotal">0.00</span>
+
+Total:
+$<span id="cartTotal">0.00</span>
+
 </div>
+
 
 <br>
 
-<button type="button" onclick="checkout()">
+
+<button
+  type="button"
+  onclick="checkout()"
+>
 Proceed to Checkout
 </button>
 
+
 </div>
 
 </div>
+
 </section>
+
 
 <section id="checkout">
 
@@ -225,15 +344,20 @@ Proceed to Checkout
 
 <h2>Complete your order</h2>
 
-<p>Enter your details to continue to payment.</p>
+<p>
+Enter your details to continue to payment.
+</p>
+
 
 <form id="checkoutForm">
+
 
 <input
   id="customerName"
   required
   placeholder="Full name"
 >
+
 
 <input
   id="customerEmail"
@@ -242,10 +366,12 @@ Proceed to Checkout
   placeholder="Email address"
 >
 
+
 <input
   id="customerPhone"
   placeholder="Phone number"
 >
+
 
 <textarea
   id="customerAddress"
@@ -253,77 +379,502 @@ Proceed to Checkout
   placeholder="Delivery address"
 ></textarea>
 
+
 <button
   type="button"
+  id="continuePaymentButton"
   onclick="startPayPalPayment()"
 >
 Continue to Payment
 </button>
 
+
 <div id="checkoutMessage"></div>
+
 
 </form>
 
 </div>
 
 </section>
- <script>
+
+
+<script>
+
+/* ================================
+   BOTCRAFT CART
+================================ */
+
+var cart = [];
+
+
+/* Load saved cart if available */
+
+try{
+
+  var savedCart =
+    localStorage.getItem("botcraft_cart");
+
+  if(savedCart){
+
+    var parsedCart =
+      JSON.parse(savedCart);
+
+    if(Array.isArray(parsedCart)){
+
+      cart = parsedCart;
+
+    }
+
+  }
+
+}catch(error){
+
+  console.error(
+    "Could not load saved cart:",
+    error
+  );
+
+}
+
+
+/* ================================
+   ADD TO CART
+================================ */
+
+function addToCart(name, price){
+
+  price = Number(price);
+
+
+  if(!name || !Number.isFinite(price)){
+
+    alert("Invalid product.");
+
+    return;
+
+  }
+
+
+  var existingItem =
+    cart.find(function(item){
+
+      return item.name === name;
+
+    });
+
+
+  if(existingItem){
+
+    existingItem.quantity += 1;
+
+  }else{
+
+    cart.push({
+
+      name:name,
+
+      price:price,
+
+      quantity:1
+
+    });
+
+  }
+
+
+  saveCart();
+
+  updateCart();
+
+
+  alert(
+    name + " added to your cart."
+  );
+
+}
+
+
+/* ================================
+   SAVE CART
+================================ */
+
+function saveCart(){
+
+  try{
+
+    localStorage.setItem(
+      "botcraft_cart",
+      JSON.stringify(cart)
+    );
+
+  }catch(error){
+
+    console.error(
+      "Could not save cart:",
+      error
+    );
+
+  }
+
+}
+
+
+/* ================================
+   UPDATE CART DISPLAY
+================================ */
+
+function updateCart(){
+
+  var cartItems =
+    document.getElementById("cartItems");
+
+  var cartCount =
+    document.getElementById("cartCount");
+
+  var cartTotal =
+    document.getElementById("cartTotal");
+
+
+  if(!cartItems ||
+     !cartCount ||
+     !cartTotal){
+
+    return;
+
+  }
+
+
+  var total = 0;
+
+  var count = 0;
+
+  var html = "";
+
+
+  if(cart.length === 0){
+
+    cartItems.innerHTML =
+      "Your cart is empty.";
+
+    cartCount.textContent =
+      "0";
+
+    cartTotal.textContent =
+      "0.00";
+
+    return;
+
+  }
+
+
+  for(var i = 0; i < cart.length; i++){
+
+    var item = cart[i];
+
+
+    if(!item){
+
+      continue;
+
+    }
+
+
+    var price =
+      Number(item.price);
+
+    var quantity =
+      Number(item.quantity);
+
+
+    if(!Number.isFinite(price) ||
+       !Number.isFinite(quantity)){
+
+      continue;
+
+    }
+
+
+    var itemTotal =
+      price * quantity;
+
+
+    total += itemTotal;
+
+    count += quantity;
+
+
+    html +=
+
+      '<div class="cart-item">' +
+
+        '<strong>' +
+          escapeHtml(item.name) +
+        '</strong>' +
+
+        '<br>' +
+
+        '$' +
+        price.toFixed(2) +
+        ' each' +
+
+        '<br>' +
+
+        'Quantity: ' +
+        quantity +
+
+        '<br>' +
+
+        'Item total: $' +
+        itemTotal.toFixed(2) +
+
+        '<div class="cart-controls">' +
+
+          '<button ' +
+            'type="button" ' +
+            'onclick="increaseQuantity(' +
+            i +
+            ')">' +
+            '+' +
+          '</button>' +
+
+          '<button ' +
+            'type="button" ' +
+            'onclick="decreaseQuantity(' +
+            i +
+            ')">' +
+            '-' +
+          '</button>' +
+
+          '<button ' +
+            'type="button" ' +
+            'onclick="removeFromCart(' +
+            i +
+            ')">' +
+            'Remove' +
+          '</button>' +
+
+        '</div>' +
+
+      '</div>';
+
+  }
+
+
+  cartItems.innerHTML =
+    html;
+
+  cartCount.textContent =
+    count;
+
+  cartTotal.textContent =
+    total.toFixed(2);
+
+}
+
+
+/* ================================
+   INCREASE QUANTITY
+================================ */
+
+function increaseQuantity(index){
+
+  if(!cart[index]){
+
+    return;
+
+  }
+
+
+  cart[index].quantity += 1;
+
+
+  saveCart();
+
+  updateCart();
+
+}
+
+
+/* ================================
+   DECREASE QUANTITY
+================================ */
+
+function decreaseQuantity(index){
+
+  if(!cart[index]){
+
+    return;
+
+  }
+
+
+  cart[index].quantity -= 1;
+
+
+  if(cart[index].quantity <= 0){
+
+    cart.splice(index,1);
+
+  }
+
+
+  saveCart();
+
+  updateCart();
+
+}
+
+
+/* ================================
+   REMOVE FROM CART
+================================ */
+
+function removeFromCart(index){
+
+  if(!cart[index]){
+
+    return;
+
+  }
+
+
+  cart.splice(index,1);
+
+
+  saveCart();
+
+  updateCart();
+
+}
+
+
+/* ================================
+   HTML ESCAPE
+================================ */
+
+function escapeHtml(value){
+
+  return String(value)
+
+    .replace(/&/g,"&amp;")
+
+    .replace(/</g,"&lt;")
+
+    .replace(/>/g,"&gt;")
+
+    .replace(/"/g,"&quot;")
+
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* ================================
+   PROCEED TO CHECKOUT
+================================ */
+
 function checkout(){
 
   if(!cart || cart.length === 0){
 
-    alert("Your cart is empty.");
+    alert(
+      "Your cart is empty."
+    );
+
     return;
 
   }
+
 
   var checkoutSection =
     document.getElementById("checkout");
 
+
   if(!checkoutSection){
 
-    alert("Checkout section not found.");
+    alert(
+      "Checkout section not found."
+    );
+
     return;
 
   }
 
+
   checkoutSection.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
+
+    behavior:"smooth",
+
+    block:"start"
+
   });
 
 }
 
 
+/* ================================
+   PAYPAL PAYMENT
+================================ */
+
 async function startPayPalPayment(){
+
+  var button =
+    document.getElementById(
+      "continuePaymentButton"
+    );
+
+  var message =
+    document.getElementById(
+      "checkoutMessage"
+    );
+
 
   try{
 
+
     if(!cart || cart.length === 0){
 
-      alert("Your cart is empty.");
+      alert(
+        "Your cart is empty."
+      );
+
       return;
 
     }
 
 
     var nameElement =
-      document.getElementById("customerName");
+      document.getElementById(
+        "customerName"
+      );
+
 
     var emailElement =
-      document.getElementById("customerEmail");
+      document.getElementById(
+        "customerEmail"
+      );
+
+
+    var phoneElement =
+      document.getElementById(
+        "customerPhone"
+      );
+
 
     var addressElement =
-      document.getElementById("customerAddress");
+      document.getElementById(
+        "customerAddress"
+      );
 
-    var message =
-      document.getElementById("checkoutMessage");
 
+    if(!nameElement ||
+       !emailElement ||
+       !addressElement){
 
-    if(!nameElement || !emailElement || !addressElement){
-
-      alert("Checkout form fields could not be found.");
-      return;
+      throw new Error(
+        "Checkout form fields could not be found."
+      );
 
     }
 
@@ -331,14 +882,24 @@ async function startPayPalPayment(){
     var name =
       nameElement.value.trim();
 
+
     var email =
       emailElement.value.trim();
+
+
+    var phone =
+      phoneElement
+        ? phoneElement.value.trim()
+        : "";
+
 
     var address =
       addressElement.value.trim();
 
 
-    if(!name || !email || !address){
+    if(!name ||
+       !email ||
+       !address){
 
       alert(
         "Please complete your name, email and delivery address."
@@ -349,24 +910,34 @@ async function startPayPalPayment(){
     }
 
 
-    if(message){
-
-      message.textContent =
-        "Connecting to PayPal...";
-
-    }
-
-
     var total = 0;
 
 
-    for(var i = 0; i < cart.length; i++){
+    for(
+      var i = 0;
+      i < cart.length;
+      i++
+    ){
+
+      var item =
+        cart[i];
+
+
+      if(!item){
+
+        throw new Error(
+          "Invalid cart item."
+        );
+
+      }
+
 
       var price =
-        Number(cart[i].price);
+        Number(item.price);
+
 
       var quantity =
-        Number(cart[i].quantity);
+        Number(item.quantity);
 
 
       if(!Number.isFinite(price) ||
@@ -386,7 +957,8 @@ async function startPayPalPayment(){
     }
 
 
-    if(!Number.isFinite(total) || total <= 0){
+    if(!Number.isFinite(total) ||
+       total <= 0){
 
       throw new Error(
         "Invalid order total."
@@ -395,17 +967,42 @@ async function startPayPalPayment(){
     }
 
 
+    if(message){
+
+      message.textContent =
+        "Connecting to PayPal...";
+
+    }
+
+
+    if(button){
+
+      button.disabled =
+        true;
+
+      button.textContent =
+        "Connecting to PayPal...";
+
+    }
+
+
     var response =
       await fetch(
-        "https://botcraft-company-ltd.botcraftcompany.workers.dev/api/paypal/create-order",
-        {
-          method: "POST",
 
-          headers: {
-            "Content-Type": "application/json"
+        "https://botcraft-company-ltd.botcraftcompany.workers.dev/api/paypal/create-order",
+
+        {
+
+          method:"POST",
+
+          headers:{
+
+            "Content-Type":
+              "application/json"
+
           },
 
-          body: JSON.stringify({
+          body:JSON.stringify({
 
             amount:
               total.toFixed(2),
@@ -416,16 +1013,24 @@ async function startPayPalPayment(){
             customerEmail:
               email,
 
+            customerPhone:
+              phone,
+
             customerAddress:
-              address
+              address,
+
+            items:
+              cart
 
           })
 
         }
+
       );
 
 
-    var data;
+    var data = null;
+
 
     try{
 
@@ -441,77 +1046,128 @@ async function startPayPalPayment(){
     }
 
 
+    console.log(
+      "PayPal create-order response:",
+      data
+    );
+
+
     if(!response.ok){
 
       throw new Error(
-        data && data.error
+
+        data &&
+        data.error
+
           ? data.error
+
           : "PayPal order creation failed."
+
       );
 
     }
 
 
-    if(!data || !Array.isArray(data.links)){
+    /*
+      PayPal normally returns:
 
-      throw new Error(
-        "PayPal did not return any approval links."
-      );
+      data.links[]
 
-    }
+      with:
 
-
-    var approvalLink = null;
-
-if(data && Array.isArray(data.links)){
-
-  approvalLink =
-    data.links.find(function(link){
-
-      return (
-        link &&
-        link.rel === "approve" &&
-        link.href
-      );
-
-    });
-
-}
-
-if(!approvalLink && data && data.approvalUrl){
-
-  approvalLink = {
-    href: data.approvalUrl
-  };
-
-}
-
-if(!approvalLink && data && data.approval_url){
-
-  approvalLink = {
-    href: data.approval_url
-  };
-
-}
-
-if(!approvalLink){
-
-  console.error(
-    "PayPal response:",
-    data
-  );
-
-  throw new Error(
-    "PayPal approval link was not returned by the server."
-  );
-
+      {
+        rel:"approve",
+        href:"..."
       }
+
+      We also support approvalUrl
+      and approval_url in case the
+      Worker returns either format.
+    */
+
+
+    var approvalLink =
+      null;
+
+
+    if(
+      data &&
+      Array.isArray(data.links)
+    ){
+
+      approvalLink =
+        data.links.find(
+          function(link){
+
+            return (
+
+              link &&
+
+              link.rel === "approve" &&
+
+              link.href
+
+            );
+
+          }
+        );
+
+    }
+
+
+    if(
+      !approvalLink &&
+      data &&
+      data.approvalUrl
+    ){
+
+      approvalLink = {
+
+        href:
+          data.approvalUrl
+
+      };
+
+    }
+
+
+    if(
+      !approvalLink &&
+      data &&
+      data.approval_url
+    ){
+
+      approvalLink = {
+
+        href:
+          data.approval_url
+
+      };
+
+    }
 
 
     if(!approvalLink){
 
+      console.error(
+        "Complete PayPal response:",
+        data
+      );
+
+
       throw new Error(
-        "PayPal approval link was not returned."
+        "PayPal approval link was not returned by the server."
+      );
+
+    }
+
+
+    if(
+      !approvalLink.href
+    ){
+
+      throw new Error(
+        "PayPal approval URL is empty."
       );
 
     }
@@ -520,6 +1176,14 @@ if(!approvalLink){
     if(message){
 
       message.textContent =
+        "Redirecting to PayPal...";
+
+    }
+
+
+    if(button){
+
+      button.textContent =
         "Redirecting to PayPal...";
 
     }
@@ -538,10 +1202,6 @@ if(!approvalLink){
     );
 
 
-    var message =
-      document.getElementById("checkoutMessage");
-
-
     if(message){
 
       message.textContent =
@@ -550,26 +1210,46 @@ if(!approvalLink){
     }
 
 
+    if(button){
+
+      button.disabled =
+        false;
+
+      button.textContent =
+        "Continue to Payment";
+
+    }
+
+
     alert(
+
       "PayPal error: " +
+
       (
-        error && error.message
+
+        error &&
+        error.message
+
           ? error.message
+
           : "Unable to start payment."
+
       )
+
     );
 
   }
 
 }
 
- </script>
 
+/* ================================
+   INITIALIZE CART
+================================ */
 
-    
+updateCart();
 
-
-  
+</script>
 
 </body>
   </html>
